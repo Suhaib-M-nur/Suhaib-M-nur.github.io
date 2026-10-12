@@ -1,0 +1,1505 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Suhaib Abdulwahid</title>
+<meta name="description" content="Suhaib Abdulwahid, marketing specialist in Medina, Saudi Arabia: content creation, video montage, paid ads, e-commerce and strategy.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Archivo:wdth,wght@62..125,400..900&family=IBM+Plex+Mono:wght@400;500&family=IBM+Plex+Sans+Arabic:wght@400;500;600;700&family=IBM+Plex+Sans:wght@400;500;600&display=swap">
+<style>
+/* Layout: a broadcast edit suite. Black stage, red signal, white type: a viewfinder opens the page,
+   a news ticker runs under it, and every section reads like a sequence on the timeline. Single dark look by design. */
+:root {
+  color-scheme: dark;
+  --bg: #070707;
+  --bg-2: #0E0E0E;
+  --bg-3: #161616;
+  --ink: #F3F1EC;
+  --ink-2: #BAB7B1;
+  --muted: #7C7872;
+  --line: #222222;
+  --line-2: #343434;
+  --red: #E3140C;
+  --red-hi: #FF4537;
+  --red-deep: #4A0603;
+
+  --f-display: "Archivo", "Arial Black", "Helvetica Neue", Arial, sans-serif;
+  --f-body: "IBM Plex Sans", "IBM Plex Sans Arabic", system-ui, -apple-system, "Segoe UI", sans-serif;
+  --f-ar: "IBM Plex Sans Arabic", "Noto Sans Arabic", "Segoe UI", Tahoma, sans-serif;
+  --f-mono: "IBM Plex Mono", "IBM Plex Sans Arabic", ui-monospace, Consolas, monospace;
+
+  --fs-h2: clamp(2.1rem, 4.6vw, 3.7rem);
+  --fs-h3: clamp(1.6rem, 2.7vw, 2.35rem);
+  --fs-lead: clamp(1.1rem, 1.5vw, 1.3rem);
+  --fs-small: .875rem;
+  --fs-micro: .75rem;
+  --wrap: 1260px;
+  --gutter: clamp(16px, 4vw, 40px);
+}
+:root[data-lang="ar"] { --f-body: var(--f-ar); }
+
+/* language switching */
+:root:not([data-lang="ar"]) .t[lang="ar"],
+:root[data-lang="ar"] .t[lang="en"] { display: none !important; }
+[lang="ar"]:not(:root), [lang="ar"]:not(:root) * { letter-spacing: 0 !important; }
+:root[data-lang="ar"] body { line-height: 1.85; }
+.ar-h { display: block; }
+.ar-type { display: block; width: calc(var(--wem) * 1em * var(--ars, 1.12)); max-width: 100%; height: auto; }
+
+/* base */
+*, *::before, *::after { box-sizing: border-box; }
+html { scroll-behavior: smooth; -webkit-text-size-adjust: 100%; background: var(--bg); }
+body { margin: 0; background: var(--bg); color: var(--ink); font-family: var(--f-body); font-size: 1rem; line-height: 1.6; -webkit-font-smoothing: antialiased; overflow-x: hidden; }
+body::after {
+  content: ""; position: fixed; inset: -100px; z-index: 70; pointer-events: none; opacity: .06;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='160' height='160'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.85' numOctaves='2' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='160' height='160' filter='url(%23n)'/%3E%3C/svg%3E");
+  animation: grain .9s steps(5) infinite;
+}
+@keyframes grain { 0% { transform: translate(0, 0); } 25% { transform: translate(-30px, 20px); } 50% { transform: translate(20px, -40px); } 75% { transform: translate(-50px, -10px); } 100% { transform: translate(10px, 30px); } }
+img, video { display: block; max-width: 100%; }
+a { color: inherit; }
+::selection { background: var(--red); color: #fff; }
+:focus-visible { outline: 2px solid var(--red-hi); outline-offset: 3px; border-radius: 4px; }
+h1, h2, h3, h4 { margin: 0; text-wrap: balance; }
+p { margin: 0; }
+ul, ol { margin: 0; padding: 0; }
+.wrap { width: 100%; max-width: var(--wrap); margin-inline: auto; padding-inline: var(--gutter); }
+.eyebrow { font-family: var(--f-mono); font-size: var(--fs-micro); letter-spacing: .16em; text-transform: uppercase; color: var(--ink-2); display: flex; align-items: center; gap: .7em; }
+.eyebrow::before { content: ""; width: 8px; height: 8px; border-radius: 50%; background: var(--red); box-shadow: 0 0 0 4px rgb(227 20 12 / .18); flex: none; }
+.display { font-family: var(--f-display); font-weight: 850; font-stretch: 112%; letter-spacing: -.025em; line-height: .98; }
+.display em { font-style: normal; color: var(--red); }
+.skip { position: absolute; inset-inline-start: -9999px; }
+.skip:focus { inset-inline-start: 16px; top: 16px; z-index: 90; background: var(--red); color: #fff; padding: 8px 12px; }
+
+/* custom cursor (fine pointers only) */
+.cursor { position: fixed; left: 0; top: 0; width: 0; height: 0; z-index: 95; pointer-events: none; opacity: 0; transition: opacity .2s; will-change: transform; }
+html.has-cursor .cursor.on { opacity: 1; }
+html.has-cursor, html.has-cursor body, html.has-cursor a, html.has-cursor button, html.has-cursor [data-src], html.has-cursor .tile img { cursor: none; }
+.cur-dot { position: absolute; left: 0; top: 0; width: 6px; height: 6px; transform: translate(-50%, -50%); border-radius: 50%; background: var(--red-hi); }
+.cur-ring {
+  position: absolute; left: 0; top: 0; width: 36px; height: 36px; transform: translate(-50%, -50%); border-radius: 50%; border: 1px solid rgb(243 241 236 / .55);
+  display: grid; place-items: center; transition: width .25s, height .25s, background .25s, border-color .25s;
+}
+.cur-lab { font: 500 10px/1 var(--f-mono); letter-spacing: .14em; color: #fff; opacity: 0; transition: opacity .2s; white-space: nowrap; }
+.cursor.is-link .cur-ring { width: 54px; height: 54px; border-color: var(--red-hi); }
+.cursor.is-media .cur-ring { width: 84px; height: 84px; background: var(--red); border-color: var(--red); }
+.cursor.is-media .cur-lab { opacity: 1; }
+:root[data-lang="ar"] .cur-lab { font-family: var(--f-ar); font-size: 12px; letter-spacing: 0; }
+
+/* header */
+.top { position: sticky; top: env(safe-area-inset-top, 0px); z-index: 40; background: rgb(7 7 7 / .8); backdrop-filter: blur(14px) saturate(1.3); -webkit-backdrop-filter: blur(14px) saturate(1.3); border-bottom: 1px solid var(--line); }
+.top .wrap { display: flex; align-items: center; gap: 18px; height: 64px; }
+.brand { display: flex; align-items: center; gap: 11px; text-decoration: none; min-width: 0; }
+.mark { width: 36px; height: 36px; flex: none; position: relative; display: grid; place-items: center; font-family: var(--f-display); font-weight: 900; font-stretch: 120%; font-size: 13px; }
+.mark::before, .mark::after { content: ""; position: absolute; width: 10px; height: 10px; border: 2px solid var(--ink); }
+.mark::before { top: 0; inset-inline-start: 0; border-inline-end: 0; border-bottom: 0; }
+.mark::after { bottom: 0; inset-inline-end: 0; border-inline-start: 0; border-top: 0; }
+.mark i { position: absolute; top: 2px; inset-inline-end: 2px; width: 7px; height: 7px; border-radius: 50%; background: var(--red); animation: blink 1.2s steps(2, start) infinite; }
+.brand-name { font-weight: 600; font-size: .95rem; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
+.nav { display: flex; gap: 2px; margin-inline-start: auto; }
+.nav a { text-decoration: none; font-size: var(--fs-small); color: var(--ink-2); padding: 8px 12px; border-radius: 999px; transition: color .2s, background .2s; }
+.nav a:hover { color: #fff; background: var(--bg-3); }
+.tc { font-family: var(--f-mono); font-size: 11px; letter-spacing: .08em; color: var(--ink-2); display: flex; align-items: center; gap: 7px; direction: ltr; font-variant-numeric: tabular-nums; }
+.tc::before { content: ""; width: 7px; height: 7px; border-radius: 50%; background: var(--red); }
+.lang { font: inherit; font-size: var(--fs-small); font-weight: 600; border: 1px solid var(--red); background: transparent; color: #fff; border-radius: 999px; padding: 7px 15px; white-space: nowrap; transition: background .2s; }
+.lang:hover { background: var(--red); }
+.progress { position: absolute; inset-inline-start: 0; bottom: -1px; height: 2px; width: 100%; background: var(--red); transform-origin: left; transform: scaleX(var(--p, 0)); }
+:root[data-lang="ar"] .progress { transform-origin: right; }
+@media (max-width: 980px) { .tc { display: none; } }
+@media (max-width: 820px) { .nav a:not(.nav-contact) { display: none; } }
+
+/* hero */
+.hero { position: relative; overflow: hidden; padding-block: clamp(40px, 6.5vw, 92px) clamp(48px, 6.5vw, 92px); isolation: isolate; }
+.spot { position: absolute; inset: 0; z-index: -1; pointer-events: none; background: radial-gradient(640px circle at var(--mx, 72%) var(--my, 38%), rgb(227 20 12 / .26), transparent 62%); }
+.hero::before { content: ""; position: absolute; inset: 0; z-index: -2; background: repeating-linear-gradient(90deg, transparent 0 calc(8.333% - 1px), rgb(255 255 255 / .035) calc(8.333% - 1px) 8.333%); }
+.hero-grid { display: grid; grid-template-columns: minmax(0, 1fr) minmax(250px, 360px); gap: clamp(28px, 5vw, 76px); align-items: center; }
+.hero-copy { min-width: 0; container-type: inline-size; display: grid; gap: 22px; }
+.alt-en { font-family: var(--f-mono); font-size: var(--fs-micro); letter-spacing: .16em; text-transform: uppercase; color: var(--red-hi); }
+.alt-ar { font-size: 1.3rem; }
+.name { font-family: var(--f-display); font-weight: 900; font-stretch: 112%; text-transform: uppercase; font-size: clamp(2.3rem, 12.6cqi, 9.2rem); line-height: .86; letter-spacing: -.035em; }
+.name .l { display: block; }
+.name .l2 { color: var(--red); }
+:root[data-lang="ar"] .name { font-size: clamp(3rem, 21cqi, 13rem); }
+.name:hover .l, .name:hover .ar-type { animation: glitch .32s steps(2) 2; }
+@keyframes glitch {
+  0% { transform: translate(0); text-shadow: 3px 0 var(--red), -3px 0 rgb(255 255 255 / .35); filter: drop-shadow(4px 0 0 rgb(227 20 12 / .9)) drop-shadow(-3px 0 0 rgb(255 255 255 / .35)); }
+  50% { transform: translate(-3px, 1px); text-shadow: -4px 0 var(--red), 2px 0 rgb(255 255 255 / .35); filter: drop-shadow(-4px 0 0 rgb(227 20 12 / .9)) drop-shadow(3px 0 0 rgb(255 255 255 / .35)); }
+  100% { transform: translate(0); text-shadow: none; filter: none; }
+}
+.thesis { font-size: clamp(1.35rem, 2.4vw, 1.95rem); line-height: 1.28; font-weight: 600; max-width: 26ch; }
+.thesis em { font-style: normal; color: var(--red-hi); }
+:root[data-lang="ar"] .thesis { max-width: none; }
+:root[data-lang="ar"] .thesis .ar-type { --ars: 1.25; }
+.sub { color: var(--ink-2); max-width: 60ch; }
+.sub b { color: var(--ink); font-weight: 600; }
+.ctas { display: flex; flex-wrap: wrap; gap: 10px; }
+.btn { display: inline-flex; align-items: center; gap: .55em; text-decoration: none; font-weight: 600; font-size: .95rem; padding: 13px 22px; border-radius: 999px; border: 1px solid var(--ink); transition: background .2s, color .2s, transform .2s, border-color .2s; }
+.btn-red { background: var(--red); border-color: var(--red); color: #fff; }
+.btn-red:hover { background: #fff; color: #000; border-color: #fff; transform: translateY(-2px); }
+.btn-ghost:hover { background: #fff; color: #000; }
+.btn svg { width: 16px; height: 16px; flex: none; }
+:root[data-lang="ar"] .btn svg.dir { transform: scaleX(-1); }
+.channels { display: flex; flex-wrap: wrap; gap: 6px 16px; align-items: center; padding-top: 14px; border-top: 1px solid var(--line); }
+.channels .lab { font-family: var(--f-mono); font-size: var(--fs-micro); color: var(--muted); text-transform: uppercase; letter-spacing: .14em; }
+.channels b { font-weight: 500; font-size: var(--fs-small); color: var(--ink-2); }
+
+.vf-wrap { display: grid; gap: 10px; justify-self: end; width: 100%; }
+.vf { position: relative; aspect-ratio: 9 / 16; width: 100%; border-radius: 20px; overflow: hidden; background: #000; isolation: isolate; box-shadow: 0 40px 90px -30px rgb(227 20 12 / .45), 0 0 0 1px var(--line-2); }
+.vf video { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; z-index: -1; }
+.vf::after { content: ""; position: absolute; inset: 0; pointer-events: none; background: linear-gradient(to bottom, rgb(0 0 0 / .55), transparent 18%, transparent 80%, rgb(0 0 0 / .6)); }
+.hud { position: absolute; inset: 0; z-index: 1; pointer-events: none; font-family: var(--f-mono); font-size: 11px; letter-spacing: .08em; direction: ltr; color: #fff; }
+.hud .c { position: absolute; width: 24px; height: 24px; border: 2px solid var(--red); }
+.hud .c1 { top: 14px; left: 14px; border-right: 0; border-bottom: 0; } .hud .c2 { top: 14px; right: 14px; border-left: 0; border-bottom: 0; }
+.hud .c3 { bottom: 14px; left: 14px; border-right: 0; border-top: 0; } .hud .c4 { bottom: 14px; right: 14px; border-left: 0; border-top: 0; }
+.hud .row { position: absolute; left: 46px; right: 46px; display: flex; justify-content: space-between; gap: 8px; }
+.hud .r1 { top: 19px; } .hud .r2 { bottom: 19px; }
+.hud .rec { display: inline-flex; align-items: center; gap: 6px; font-weight: 500; }
+.hud .rec::before { content: ""; width: 8px; height: 8px; border-radius: 50%; background: var(--red); animation: blink 1.2s steps(2, start) infinite; }
+.hud .dim { color: rgb(255 255 255 / .62); }
+.hud .cross { position: absolute; left: 50%; top: 50%; width: 18px; height: 18px; transform: translate(-50%, -50%); opacity: .6; }
+.hud .cross::before, .hud .cross::after { content: ""; position: absolute; background: #fff; }
+.hud .cross::before { left: 50%; top: 0; bottom: 0; width: 1px; } .hud .cross::after { top: 50%; left: 0; right: 0; height: 1px; }
+@keyframes blink { to { visibility: hidden; } }
+.vf-cap { display: flex; align-items: center; justify-content: space-between; gap: 10px; color: var(--muted); font-size: var(--fs-small); }
+.icon-btn { font: 500 11px var(--f-mono); letter-spacing: .06em; display: inline-flex; align-items: center; gap: 6px; padding: 6px 11px; border-radius: 999px; border: 1px solid var(--line-2); background: var(--bg-2); color: var(--ink); }
+.icon-btn:hover { border-color: var(--red); }
+.icon-btn svg { width: 11px; height: 11px; }
+@media (max-width: 860px) { .hero-grid { grid-template-columns: minmax(0, 1fr); } .vf-wrap { justify-self: center; max-width: 320px; } }
+
+/* ticker */
+.ticker { background: var(--red); color: #fff; overflow: hidden; display: flex; align-items: stretch; border-block: 1px solid #000; }
+.ticker-tag { flex: none; background: #000; color: #fff; font-family: var(--f-mono); font-size: 11px; font-weight: 500; letter-spacing: .14em; text-transform: uppercase; display: flex; align-items: center; gap: 8px; padding: 0 16px; position: relative; z-index: 1; }
+.ticker-tag::before { content: ""; width: 7px; height: 7px; border-radius: 50%; background: var(--red); animation: blink 1.2s steps(2, start) infinite; }
+:root[data-lang="ar"] .ticker-tag { font-family: var(--f-ar); font-size: 13px; }
+.ticker-view { overflow: hidden; flex: 1; min-width: 0; }
+.ticker-track { display: flex; width: max-content; animation: tick 48s linear infinite; }
+:root[data-lang="ar"] .ticker-track { animation-name: tick-rtl; }
+.ticker:hover .ticker-track { animation-play-state: paused; }
+.ticker-track span { font-family: var(--f-display); font-weight: 800; font-stretch: 110%; text-transform: uppercase; font-size: 1.05rem; letter-spacing: .01em; padding: 13px 0; white-space: nowrap; display: flex; align-items: center; }
+:root[data-lang="ar"] .ticker-track span { font-family: var(--f-ar); font-weight: 700; font-size: 1.05rem; }
+.ticker-track span::after { content: ""; width: 7px; height: 7px; background: #000; border-radius: 50%; margin-inline: 22px; }
+@keyframes tick { to { transform: translateX(-50%); } }
+@keyframes tick-rtl { to { transform: translateX(50%); } }
+
+/* sections */
+section { scroll-margin-top: 72px; }
+.sec { padding-block: clamp(64px, 9vw, 124px); }
+.sec-head { display: grid; gap: 16px; margin-bottom: clamp(30px, 4.5vw, 54px); max-width: 820px; }
+.sec-head h2 { font-size: var(--fs-h2); }
+.sec-head p { color: var(--ink-2); font-size: var(--fs-lead); max-width: 62ch; }
+
+/* emirate feature */
+.emirate { position: relative; overflow: hidden; isolation: isolate; padding-block: clamp(64px, 8vw, 112px); border-bottom: 1px solid var(--line); }
+.em-bg { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; z-index: -2; filter: blur(30px) saturate(.5) brightness(.42); transform: scale(1.25); }
+.emirate::before { content: ""; position: absolute; inset: 0; z-index: -1; background: linear-gradient(180deg, rgb(7 7 7 / .55), rgb(7 7 7 / .82) 60%, var(--bg)), radial-gradient(800px circle at 15% 20%, rgb(227 20 12 / .2), transparent 60%); }
+.em-grid { display: grid; grid-template-columns: minmax(150px, 230px) minmax(0, 1fr); gap: clamp(28px, 5vw, 72px); align-items: start; }
+.em-logo { width: 100%; height: auto; filter: drop-shadow(0 10px 40px rgb(0 0 0 / .6)); }
+.em-copy { display: grid; gap: 18px; max-width: 760px; min-width: 0; }
+.em-copy h2 { font-size: clamp(2rem, 4.2vw, 3.4rem); }
+.em-copy > p { color: var(--ink-2); font-size: var(--fs-lead); }
+.em-list { list-style: none; display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 10px 26px; }
+.em-list li { position: relative; padding-inline-start: 22px; color: var(--ink); font-size: .97rem; }
+.em-list li::before { content: ""; position: absolute; inset-inline-start: 0; top: .62em; width: 12px; height: 2px; background: var(--red); }
+.official { display: inline-flex; align-items: center; gap: 8px; font-family: var(--f-mono); font-size: 11px; letter-spacing: .08em; color: var(--ink-2); border: 1px solid var(--line-2); border-radius: 999px; padding: 6px 12px; width: max-content; max-width: 100%; direction: ltr; }
+.official i { width: 7px; height: 7px; border-radius: 50%; background: var(--red); }
+@media (max-width: 760px) { .em-grid { grid-template-columns: minmax(0, 1fr); } .em-logo { width: 150px; } .em-list { grid-template-columns: minmax(0, 1fr); } }
+.rail-head { display: flex; align-items: center; justify-content: space-between; gap: 12px; margin-top: clamp(36px, 5vw, 56px); margin-bottom: 16px; }
+.rail-head .lab { font-family: var(--f-mono); font-size: var(--fs-micro); letter-spacing: .14em; text-transform: uppercase; color: var(--ink-2); }
+:root[data-lang="ar"] .rail-head .lab { font-family: var(--f-ar); font-size: 13px; }
+.arrows { display: flex; gap: 8px; }
+.arrows button { width: 42px; height: 42px; border-radius: 50%; border: 1px solid var(--line-2); background: var(--bg-2); color: #fff; display: grid; place-items: center; transition: background .2s, border-color .2s; }
+.arrows button:hover { background: var(--red); border-color: var(--red); }
+.arrows svg { width: 16px; height: 16px; }
+:root[data-lang="ar"] .arrows svg { transform: scaleX(-1); }
+.rail { display: grid; grid-auto-flow: column; grid-auto-columns: clamp(168px, 17.2vw, 214px); gap: 16px; overflow-x: auto; scroll-snap-type: x mandatory; padding-bottom: 14px; scrollbar-width: thin; scrollbar-color: var(--red) var(--bg-3); }
+.rail > * { scroll-snap-align: start; }
+
+/* video cards (shared) */
+.vcard { display: grid; gap: 9px; align-content: start; min-width: 0; }
+.vthumb, .tile { position: relative; overflow: hidden; background: #111; }
+.vthumb { aspect-ratio: 9 / 16; border-radius: 12px; border: 1px solid var(--line-2); transition: transform .35s cubic-bezier(.2,.7,.2,1), border-color .25s, box-shadow .35s; }
+.vthumb video, .tile video { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; }
+.vcard:hover .vthumb { transform: translateY(-5px); border-color: var(--red); box-shadow: 0 24px 50px -20px rgb(227 20 12 / .55); }
+.vplay { position: absolute; left: 50%; top: 50%; width: 54px; height: 54px; margin: -27px 0 0 -27px; border-radius: 50%; display: grid; place-items: center; background: rgb(0 0 0 / .35); border: 1.5px solid rgb(255 255 255 / .85); backdrop-filter: blur(6px); -webkit-backdrop-filter: blur(6px); color: #fff; transition: transform .25s, background .25s, opacity .25s; pointer-events: none; }
+.vplay svg { width: 17px; height: 17px; margin-inline-start: 3px; }
+[data-src]:hover .vplay { background: var(--red); border-color: var(--red); transform: scale(1.08); }
+.previewing .vplay { opacity: 0; }
+.dur { position: absolute; top: 9px; inset-inline-end: 9px; font: 500 10px var(--f-mono); letter-spacing: .06em; color: #fff; background: rgb(0 0 0 / .62); padding: 2px 6px; border-radius: 4px; pointer-events: none; direction: ltr; }
+.vtag { font: 500 10px var(--f-mono); letter-spacing: .12em; text-transform: uppercase; color: var(--red-hi); }
+:root[data-lang="ar"] .vtag { font-family: var(--f-ar); font-size: 12px; }
+.vcard h4 { font-size: .97rem; font-weight: 600; line-height: 1.3; }
+.vcard p { font-size: var(--fs-small); color: var(--muted); line-height: 1.45; }
+[data-src] { cursor: pointer; }
+
+/* highlights */
+.highlights { border-bottom: 1px solid var(--line); }
+.stats { display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); border-top: 1px solid var(--line); }
+.stat { padding: 28px clamp(14px, 2vw, 28px) 30px; display: grid; gap: 12px; align-content: start; min-width: 0; position: relative; }
+.stat + .stat { border-inline-start: 1px solid var(--line); }
+.stat:first-child { padding-inline-start: 0; }
+.stat::before { content: ""; position: absolute; top: -1px; inset-inline-start: 0; width: 44px; height: 3px; background: var(--red); }
+.stat + .stat::before { inset-inline-start: clamp(14px, 2vw, 28px); }
+.stat-num { font-family: "Archivo", var(--f-display); font-weight: 900; font-stretch: 115%; letter-spacing: -.035em; font-size: clamp(2.3rem, 3.7vw, 3.6rem); line-height: .95; direction: ltr; white-space: nowrap; text-align: start; font-variant-numeric: tabular-nums; }
+:root[data-lang="ar"] .stat-num { text-align: right; }
+.stat-num small { font-size: .45em; color: var(--red); }
+.stat-label { color: var(--ink-2); }
+.stat-src { font-family: var(--f-mono); font-size: var(--fs-micro); color: var(--muted); }
+.privacy { display: flex; gap: 10px; align-items: flex-start; margin-top: 22px; color: var(--muted); font-size: var(--fs-small); max-width: 70ch; }
+.privacy svg { width: 15px; height: 15px; flex: none; margin-top: 3px; color: var(--red-hi); }
+@media (max-width: 900px) {
+  .stats { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+  .stat:nth-child(3) { border-inline-start: 0; padding-inline-start: 0; }
+  .stat:nth-child(3)::before { inset-inline-start: 0; }
+  .stat:nth-child(n+3) { border-top: 1px solid var(--line); }
+}
+@media (max-width: 520px) {
+  .stats { grid-template-columns: minmax(0, 1fr); }
+  .stat, .stat + .stat { border-inline-start: 0; padding-inline-start: 0; border-top: 1px solid var(--line); }
+  .stat + .stat::before { inset-inline-start: 0; }
+}
+
+/* case studies */
+.case { padding-block: clamp(44px, 6vw, 84px); border-top: 1px solid var(--line); }
+.case:first-of-type { border-top: 0; padding-top: 0; }
+.case-grid { display: grid; grid-template-columns: minmax(0, 5fr) minmax(0, 7fr); gap: clamp(28px, 4.5vw, 64px); align-items: start; }
+.case-text { display: grid; gap: 20px; min-width: 0; }
+.case-id { display: flex; align-items: center; gap: 14px; }
+.logo-chip { width: 54px; height: 54px; flex: none; border-radius: 12px; display: grid; place-items: center; overflow: hidden; background: var(--chip-bg, #000); padding: 7px; border: 1px solid var(--line-2); }
+.logo-chip img { width: 100%; height: 100%; object-fit: contain; }
+.case-id .who { display: grid; gap: 2px; min-width: 0; }
+.case-id .who strong { font-size: 1.1rem; }
+.case-id .who span { color: var(--muted); font-size: var(--fs-small); }
+.case h3 { font-family: var(--f-display); font-weight: 850; font-stretch: 110%; font-size: var(--fs-h3); line-height: 1.04; letter-spacing: -.02em; }
+.meta { display: grid; grid-template-columns: auto 1fr; gap: 6px 16px; font-size: var(--fs-small); padding-block: 14px; border-block: 1px solid var(--line); margin: 0; }
+.meta dt { font-family: var(--f-mono); font-size: var(--fs-micro); text-transform: uppercase; letter-spacing: .1em; color: var(--muted); padding-top: 2px; }
+.meta dd { margin: 0; color: var(--ink-2); min-width: 0; }
+.brief { color: var(--ink-2); }
+.did-h { font-family: var(--f-mono); font-size: var(--fs-micro); text-transform: uppercase; letter-spacing: .14em; color: var(--red-hi); }
+.did { list-style: none; display: grid; gap: 11px; }
+.did li { position: relative; padding-inline-start: 22px; font-size: .97rem; }
+.did li::before { content: ""; position: absolute; inset-inline-start: 0; top: .66em; width: 12px; height: 2px; background: var(--red); }
+.deliv { display: flex; flex-wrap: wrap; gap: 7px; padding-top: 16px; border-top: 1px solid var(--line); }
+.deliv span { font-size: 12.5px; padding: 5px 11px; border-radius: 999px; border: 1px solid rgb(227 20 12 / .55); color: var(--ink); background: rgb(227 20 12 / .07); }
+.board { background: var(--bg-2); border: 1px solid var(--line); border-radius: 18px; padding: clamp(10px, 1.5vw, 16px); display: grid; gap: clamp(8px, 1.1vw, 12px); min-width: 0; }
+.board-head { display: flex; justify-content: space-between; gap: 10px; align-items: center; padding: 4px 4px 2px; font-family: var(--f-mono); font-size: var(--fs-micro); letter-spacing: .12em; text-transform: uppercase; color: var(--muted); }
+.board-head b { color: var(--ink); font-weight: 500; display: inline-flex; align-items: center; gap: 8px; }
+.board-head b::before { content: ""; width: 7px; height: 7px; border-radius: 50%; background: var(--red); }
+.row { display: flex; gap: clamp(8px, 1.1vw, 12px); min-width: 0; }
+.tile { margin: 0; flex: var(--ar, 1) 1 0%; aspect-ratio: var(--ar, 1); min-width: 0; border-radius: 9px; }
+.tile img { width: 100%; height: 100%; object-fit: cover; transition: transform .6s cubic-bezier(.2,.7,.2,1), filter .4s; }
+.tile:hover img { transform: scale(1.04); }
+.board:hover .tile img { filter: brightness(.7); }
+.board .tile:hover img { filter: none; }
+@media (max-width: 980px) { .case-grid { grid-template-columns: minmax(0, 1fr); } }
+@media (max-width: 560px) {
+  .row.wrap-sm { flex-wrap: wrap; }
+  .row.wrap-sm .tile { flex: 1 1 calc(50% - 8px); aspect-ratio: auto; }
+  .row.wrap-sm .tile img { height: auto; aspect-ratio: var(--ar); }
+  .row.wrap-sm .tile.vt { aspect-ratio: var(--ar); }
+}
+
+/* more work */
+.more { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: clamp(14px, 2vw, 22px); }
+.card { background: var(--bg-2); border: 1px solid var(--line); border-radius: 16px; overflow: hidden; display: grid; grid-template-rows: auto 1fr; min-width: 0; transition: border-color .25s, transform .35s cubic-bezier(.2,.7,.2,1); }
+.card:hover { border-color: var(--red); transform: translateY(-4px); }
+.card .media { aspect-ratio: 4 / 3; background: var(--card-bg, #111); display: flex; gap: 6px; padding: var(--card-pad, 0); overflow: hidden; }
+.card .media img { width: 100%; height: 100%; object-fit: cover; min-width: 0; }
+.card .media.trio img { border-radius: 8px; }
+.card .body { padding: 18px 18px 22px; display: grid; gap: 10px; align-content: start; }
+.card h4 { font-size: 1.12rem; font-weight: 600; }
+.card .k { font-family: var(--f-mono); font-size: var(--fs-micro); color: var(--red-hi); letter-spacing: .08em; text-transform: uppercase; }
+:root[data-lang="ar"] .card .k { font-family: var(--f-ar); font-size: 12.5px; }
+.card p { color: var(--ink-2); font-size: .95rem; }
+@media (max-width: 960px) { .more { grid-template-columns: repeat(2, minmax(0, 1fr)); } }
+@media (max-width: 600px) { .more { grid-template-columns: minmax(0, 1fr); } }
+
+/* video wall */
+.wall-sec { background: #000; border-block: 1px solid var(--line); }
+.wall-group + .wall-group { margin-top: clamp(40px, 5vw, 60px); }
+.wall-group h3 { font-family: var(--f-mono); font-size: var(--fs-micro); letter-spacing: .16em; text-transform: uppercase; color: var(--ink-2); font-weight: 500; display: flex; gap: 12px; align-items: center; margin-bottom: 18px; }
+:root[data-lang="ar"] .wall-group h3 { font-family: var(--f-ar); font-size: 14px; }
+.wall-group h3::after { content: ""; flex: 1; height: 1px; background: var(--line-2); }
+.wall { display: grid; grid-template-columns: repeat(6, minmax(0, 1fr)); gap: 22px 14px; }
+@media (max-width: 980px) { .wall { grid-template-columns: repeat(3, minmax(0, 1fr)); } }
+@media (max-width: 560px) { .wall { grid-template-columns: repeat(2, minmax(0, 1fr)); } }
+
+/* experience + timeline */
+.exp { list-style: none; border-top: 1px solid var(--line); margin-bottom: clamp(36px, 5vw, 56px); }
+.exp li { display: grid; grid-template-columns: 170px minmax(0, 1.1fr) minmax(0, 1.6fr); gap: 8px 28px; padding: 18px 0; border-bottom: 1px solid var(--line); position: relative; }
+.exp li::before { content: ""; position: absolute; inset-inline-start: 0; top: -1px; height: 2px; width: 0; background: var(--red); transition: width .4s cubic-bezier(.2,.7,.2,1); }
+.exp li:hover::before { width: 100%; }
+.exp .when { font-family: var(--f-mono); font-size: var(--fs-micro); color: var(--muted); padding-top: 4px; letter-spacing: .04em; }
+:root[data-lang="ar"] .exp .when { font-family: var(--f-ar); font-size: 13px; }
+.exp .who strong { display: block; font-size: 1.08rem; font-weight: 600; }
+.exp .who > span { color: var(--red-hi); font-size: var(--fs-small); }
+.exp .what { color: var(--ink-2); font-size: .95rem; }
+.exp .live { display: inline-block; margin-inline-start: 8px; font: 500 10px var(--f-mono); letter-spacing: .1em; color: #fff; background: var(--red); padding: 1px 6px; border-radius: 3px; vertical-align: 2px; }
+:root[data-lang="ar"] .exp .live { font-family: var(--f-ar); font-size: 11px; }
+@media (max-width: 760px) { .exp li { grid-template-columns: minmax(0, 1fr); } }
+
+.nle-scroll { overflow-x: auto; border: 1px solid var(--line); border-radius: 16px; background: var(--bg-2); scrollbar-width: thin; scrollbar-color: var(--red) var(--bg-3); }
+.nle { position: relative; min-width: 940px; padding: 14px 16px 16px; font-size: 12px; --lab: 118px; }
+.nle-row { display: grid; grid-template-columns: var(--lab) minmax(0, 1fr); align-items: center; }
+.nle-label { font-family: var(--f-mono); font-size: 11px; color: var(--muted); display: flex; gap: 8px; align-items: center; min-width: 0; white-space: nowrap; overflow: hidden; }
+:root[data-lang="ar"] .nle-label { font-family: var(--f-ar); font-size: 12px; }
+.nle-label b { font-weight: 500; color: #fff; background: var(--bg-3); border: 1px solid var(--line-2); padding: 1px 6px; border-radius: 4px; font-family: var(--f-mono); font-size: 10px; }
+.lane { position: relative; height: 42px; border-top: 1px solid var(--line); background-image: repeating-linear-gradient(to var(--lane-dir, right), transparent 0 calc(100% / 24 - 1px), var(--line) calc(100% / 24 - 1px) calc(100% / 24)); }
+:root[data-lang="ar"] .lane { --lane-dir: left; }
+.lane.tall { height: 60px; }
+.ruler { position: relative; height: 36px; font-family: var(--f-mono); color: var(--muted); }
+.ruler .y { position: absolute; top: 0; font-weight: 500; color: #fff; font-size: 11px; padding-inline-start: 5px; border-inline-start: 1px solid var(--red); height: 36px; }
+.ruler .mth { position: absolute; bottom: 3px; width: calc(100% / 24); text-align: center; font-size: 10px; }
+.scrub { position: absolute; inset: 0; width: 100%; height: 36px; margin: 0; background: transparent; -webkit-appearance: none; appearance: none; z-index: 3; cursor: ew-resize; }
+.scrub::-webkit-slider-runnable-track { height: 36px; background: transparent; }
+.scrub::-moz-range-track { height: 36px; background: transparent; }
+.scrub::-webkit-slider-thumb { -webkit-appearance: none; width: 16px; height: 36px; border-radius: 4px; background: var(--red); box-shadow: 0 0 0 3px rgb(227 20 12 / .25); }
+.scrub::-moz-range-thumb { width: 16px; height: 36px; border: 0; border-radius: 4px; background: var(--red); }
+.clip { position: absolute; top: 7px; bottom: 7px; border-radius: 6px; padding: 0 9px; display: flex; align-items: center; gap: 6px; background: var(--bg-3); border: 1px solid var(--line-2); color: var(--ink-2); font-weight: 600; font-size: 11.5px; white-space: nowrap; overflow: hidden; cursor: pointer; transition: background .2s, color .2s, border-color .2s; }
+.clip.on { background: var(--red); border-color: var(--red); color: #fff; }
+.clip small { font-weight: 400; opacity: .8; font-size: 10.5px; }
+.clip.live::after { content: ""; position: absolute; inset-inline-end: 0; top: 0; bottom: 0; width: 10px; background: repeating-linear-gradient(135deg, rgb(255 255 255 / .3) 0 3px, transparent 3px 6px); }
+.marker { position: absolute; top: 50%; transform: translate(-5.5px, -50%); display: flex; align-items: center; gap: 6px; white-space: nowrap; }
+:root[data-lang="ar"] .marker { transform: translate(5.5px, -50%); }
+.marker.flip { flex-direction: row-reverse; transform: translate(calc(-100% + 5.5px), -50%); }
+:root[data-lang="ar"] .marker.flip { transform: translate(calc(100% - 5.5px), -50%); }
+.marker::before { content: ""; width: 11px; height: 11px; background: #fff; transform: rotate(45deg); border-radius: 2px; flex: none; }
+.marker span { font-size: 11px; color: var(--ink-2); }
+.ph-layer { position: absolute; inset: 14px 16px 16px; display: grid; grid-template-columns: var(--lab) minmax(0, 1fr); pointer-events: none; z-index: 2; }
+.ph-track { position: relative; grid-column: 2; }
+.playhead { position: absolute; top: 0; bottom: 0; width: 2px; margin-inline-start: -1px; background: var(--red); inset-inline-start: var(--ph, 88.8%); box-shadow: 0 0 14px rgb(227 20 12 / .7); }
+.readout { display: flex; flex-wrap: wrap; align-items: center; gap: 8px 14px; margin-top: 14px; font-size: var(--fs-small); color: var(--ink-2); min-height: 28px; }
+.readout .when { font-family: var(--f-mono); font-size: 12px; color: #fff; background: var(--red); padding: 3px 9px; border-radius: 4px; direction: ltr; }
+:root[data-lang="ar"] .readout .when { font-family: var(--f-ar); direction: rtl; }
+.readout .hint { color: var(--muted); font-family: var(--f-mono); font-size: 11px; letter-spacing: .06em; }
+:root[data-lang="ar"] .readout .hint { font-family: var(--f-ar); font-size: 12px; }
+
+/* toolkit */
+.kit { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); column-gap: clamp(20px, 3.4vw, 48px); }
+.kit > div { padding-block: 24px 32px; display: grid; gap: 12px; align-content: start; border-top: 2px solid var(--line-2); min-width: 0; transition: border-color .3s; }
+.kit > div:hover { border-color: var(--red); }
+.kit h4 { font-family: var(--f-display); font-weight: 850; font-stretch: 112%; font-size: 1.35rem; }
+:root[data-lang="ar"] .kit h4 { font-family: var(--f-ar); font-weight: 700; }
+.kit p { color: var(--ink-2); font-size: .95rem; }
+.chips { display: flex; flex-wrap: wrap; gap: 6px; }
+.chips span { font-size: 12.5px; padding: 4px 11px; border-radius: 999px; border: 1px solid var(--line-2); color: var(--ink); }
+.langs { display: flex; flex-wrap: wrap; gap: 10px 28px; margin-top: 22px; font-size: .95rem; color: var(--ink-2); }
+.langs b { color: #fff; font-weight: 600; }
+@media (max-width: 900px) { .kit { grid-template-columns: repeat(2, minmax(0, 1fr)); } }
+@media (max-width: 560px) { .kit { grid-template-columns: minmax(0, 1fr); } }
+
+/* process */
+.steps { margin: 0; padding: 0; list-style: none; display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: clamp(14px, 2vw, 22px); counter-reset: s; }
+.steps li { position: relative; background: var(--bg-2); border: 1px solid var(--line); border-radius: 16px; padding: 22px 20px 26px; display: grid; gap: 10px; align-content: start; min-width: 0; transition: border-color .25s; }
+.steps li:hover { border-color: var(--red); }
+.steps li::before { counter-increment: s; content: "0" counter(s); font-family: "Archivo", var(--f-display); font-weight: 900; font-stretch: 120%; font-size: 2.2rem; line-height: 1; color: var(--red); }
+.steps li:not(:last-child)::after { content: ""; position: absolute; top: 36px; inset-inline-end: calc(-1 * clamp(14px, 2vw, 22px)); width: clamp(14px, 2vw, 22px); height: 2px; background: var(--red); }
+.steps h4 { font-family: var(--f-display); font-weight: 850; font-stretch: 112%; font-size: 1.35rem; }
+:root[data-lang="ar"] .steps h4 { font-family: var(--f-ar); font-weight: 700; }
+.steps p { color: var(--ink-2); font-size: .95rem; }
+@media (max-width: 900px) { .steps { grid-template-columns: repeat(2, minmax(0, 1fr)); } .steps li::after { display: none; } }
+@media (max-width: 520px) { .steps { grid-template-columns: minmax(0, 1fr); } }
+
+/* education */
+.edu { display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 1fr); gap: clamp(20px, 4vw, 56px); }
+.edu h3 { font-family: var(--f-mono); font-size: var(--fs-micro); text-transform: uppercase; letter-spacing: .14em; color: var(--red-hi); font-weight: 500; margin-bottom: 12px; }
+:root[data-lang="ar"] .edu h3 { font-family: var(--f-ar); font-size: 13px; }
+.edu-list { list-style: none; }
+.edu-list li { display: grid; grid-template-columns: minmax(0, 1fr) auto; gap: 4px 16px; padding: 16px 0; border-top: 1px solid var(--line); }
+.edu-list li:last-child { border-bottom: 1px solid var(--line); }
+.edu-list strong { font-weight: 600; }
+.edu-list .when { font-family: var(--f-mono); font-size: var(--fs-micro); color: var(--muted); white-space: nowrap; padding-top: 3px; direction: ltr; }
+.edu-list .where { grid-column: 1 / -1; color: var(--muted); font-size: var(--fs-small); }
+.edu-list a { color: var(--red-hi); text-underline-offset: 3px; }
+@media (max-width: 760px) { .edu { grid-template-columns: minmax(0, 1fr); } }
+
+/* contact */
+.contact { background: var(--red); color: #fff; position: relative; overflow: hidden; isolation: isolate; }
+.contact::before { content: ""; position: absolute; inset: 0; z-index: -1; background: radial-gradient(900px circle at 85% 10%, rgb(255 255 255 / .16), transparent 55%), repeating-linear-gradient(90deg, transparent 0 calc(8.333% - 1px), rgb(0 0 0 / .08) calc(8.333% - 1px) 8.333%); }
+.contact .eyebrow { color: #fff; }
+.contact .eyebrow::before { background: #fff; box-shadow: 0 0 0 4px rgb(255 255 255 / .22); }
+.contact h2 { font-family: var(--f-display); font-weight: 900; font-stretch: 112%; font-size: clamp(2.4rem, 6.4vw, 5.4rem); line-height: .94; letter-spacing: -.035em; max-width: 14ch; margin-top: 14px; }
+.contact h2 .ar-type { --ars: 1; }
+.contact-grid { display: grid; grid-template-columns: minmax(0, 1.1fr) minmax(0, 1fr); gap: clamp(28px, 5vw, 72px); align-items: end; }
+.contact .lead { font-size: var(--fs-lead); margin-top: 20px; max-width: 44ch; color: rgb(255 255 255 / .88); }
+.lines { display: grid; }
+.line { display: flex; align-items: center; gap: 12px; padding: 15px 0; border-top: 1px solid rgb(255 255 255 / .35); min-width: 0; flex-wrap: wrap; }
+.line:last-child { border-bottom: 1px solid rgb(255 255 255 / .35); }
+.line .lab { font-family: var(--f-mono); font-size: var(--fs-micro); letter-spacing: .12em; text-transform: uppercase; width: 92px; flex: none; opacity: .8; }
+:root[data-lang="ar"] .line .lab { font-family: var(--f-ar); font-size: 13px; }
+.line .val { font-size: 1.1rem; font-weight: 600; user-select: all; min-width: 0; overflow-wrap: anywhere; direction: ltr; }
+.line .acts { display: flex; gap: 6px; margin-inline-start: auto; }
+.pill { font: inherit; font-size: 12px; font-weight: 600; text-decoration: none; display: inline-flex; align-items: center; gap: 5px; padding: 7px 13px; border-radius: 999px; border: 1px solid rgb(255 255 255 / .7); background: transparent; color: #fff; transition: background .2s, color .2s; }
+.pill:hover { background: #fff; color: var(--red); }
+.pill svg { width: 12px; height: 12px; }
+@media (max-width: 860px) { .contact-grid { grid-template-columns: minmax(0, 1fr); } }
+footer { padding-block: 26px 36px; color: var(--muted); font-size: var(--fs-small); background: #000; }
+footer .wrap { display: flex; flex-wrap: wrap; gap: 8px 24px; justify-content: space-between; }
+
+/* dialogs */
+dialog.modal { border: 0; padding: 0; background: transparent; color: #fff; max-width: min(96vw, 1200px); max-height: 96vh; overflow: visible; }
+dialog.modal::backdrop { background: rgb(0 0 0 / .9); backdrop-filter: blur(6px); }
+.modal-in { display: grid; gap: 12px; justify-items: center; }
+.modal img { max-width: min(94vw, 1200px); max-height: 80vh; width: auto; height: auto; border-radius: 12px; background: #000; }
+.modal video { aspect-ratio: 9 / 16; height: min(80vh, 160vw); max-width: 94vw; width: auto; border-radius: 12px; background: #000; }
+.modal-bar { display: flex; align-items: center; gap: 14px; justify-content: center; max-width: 92vw; }
+.modal-cap { font-size: var(--fs-small); text-align: center; color: #EEE; }
+.modal-count { font: 500 11px var(--f-mono); color: var(--muted); letter-spacing: .08em; direction: ltr; text-align: center; }
+.modal-nav { width: 40px; height: 40px; flex: none; border-radius: 50%; border: 1px solid rgb(255 255 255 / .3); background: #111; color: #fff; display: grid; place-items: center; }
+.modal-nav:hover { background: var(--red); border-color: var(--red); }
+.modal-nav svg { width: 15px; height: 15px; }
+:root[data-lang="ar"] .modal-nav svg { transform: scaleX(-1); }
+.modal-close { position: absolute; top: -16px; inset-inline-end: -16px; width: 38px; height: 38px; border-radius: 50%; border: 0; background: var(--red); color: #fff; font-size: 20px; line-height: 1; z-index: 2; }
+@media (max-width: 600px) { .modal-close { top: 6px; inset-inline-end: 6px; } }
+
+@media (prefers-reduced-motion: reduce) {
+  html { scroll-behavior: auto; }
+  *, *::before, *::after { animation: none !important; transition: none !important; }
+  .ticker-view { overflow-x: auto; }
+}
+</style>
+</head>
+<body>
+<a class="skip" href="#emirate"><span class="t" lang="en">Skip to work</span><span class="t" lang="ar">انتقل إلى الأعمال</span></a>
+<div class="cursor" aria-hidden="true"><span class="cur-ring"><b class="cur-lab"></b></span><span class="cur-dot"></span></div>
+
+<header class="top">
+  <div class="wrap">
+    <a class="brand" href="#top" aria-label="Suhaib Abdulwahid">
+      <span class="mark" aria-hidden="true">SA<i></i></span>
+      <span class="brand-name"><span class="t" lang="en">Suhaib Abdulwahid</span><span class="t" lang="ar">صهيب عبدالواحد</span></span>
+    </a>
+    <nav class="nav" aria-label="Sections">
+      <a href="#emirate"><span class="t" lang="en">Emirate</span><span class="t" lang="ar">الإمارة</span></a>
+      <a href="#work"><span class="t" lang="en">Work</span><span class="t" lang="ar">الأعمال</span></a>
+      <a href="#video"><span class="t" lang="en">Video</span><span class="t" lang="ar">الفيديو</span></a>
+      <a href="#experience"><span class="t" lang="en">Experience</span><span class="t" lang="ar">الخبرات</span></a>
+      <a class="nav-contact" href="#contact"><span class="t" lang="en">Contact</span><span class="t" lang="ar">تواصل</span></a>
+    </nav>
+    <span class="tc" id="tc" aria-hidden="true">00:00:00:00</span>
+    <button class="lang" id="langBtn" type="button" aria-label="Switch language">
+      <span class="t" lang="en"><span lang="ar">العربية</span></span><span class="t" lang="ar"><span lang="en">English</span></span>
+    </button>
+  </div>
+  <span class="progress" id="progress" aria-hidden="true"></span>
+</header>
+
+<main id="top">
+<!-- ================= HERO ================= -->
+<section class="hero" id="hero">
+  <div class="spot" aria-hidden="true"></div>
+  <div class="wrap hero-grid">
+    <div class="hero-copy">
+      <p class="eyebrow"><span class="t" lang="en">Marketing Specialist · Medina, Saudi Arabia</span><span class="t" lang="ar">أخصائي تسويق · المدينة المنورة</span></p>
+      <div class="alt-ar t" lang="en"><img class="ar-type" src="assets/type/ar-alt.svg" alt="صهيب محمد نور عبدالواحد" style="--wem:10.194;--ars:1"></div>
+      <p class="alt-en t" lang="ar"><span lang="en">Suhaib Mohammednur Abdulwahid</span></p>
+      <h1 class="name">
+        <span class="t" lang="en"><span class="l">Suhaib</span><span class="l l2">Abdulwahid</span></span>
+        <span class="t ar-h" lang="ar"><img class="ar-type" src="assets/type/ar-name.svg" alt="صهيب عبدالواحد" style="--wem:3.817;--ars:1"></span>
+      </h1>
+      <p class="thesis">
+        <span class="t" lang="en">Marketing that starts with a plan <em>and ends with orders.</em></span>
+        <span class="t ar-h" lang="ar"><img class="ar-type" src="assets/type/ar-thesis.svg" alt="تسويق يبدأ بخطة وينتهي بطلبات." style="--wem:6.439"></span>
+      </p>
+      <p class="sub">
+        <span class="t" lang="en">I build marketing strategies and run them end to end: campaign planning, paid ads on Snapchat, TikTok, Meta and Google, Salla and Zid stores, influencer programs and monthly reporting. On top of that, I create content and edit video myself, and I’ve contributed content creation and video montage to the <b>Emirate of Madinah Region</b>.</span>
+        <span class="t" lang="ar">أبني استراتيجيات التسويق وأديرها من البداية للنهاية: تخطيط الحملات، والإعلانات الممولة على سناب شات وتيك توك وميتا وقوقل، وإدارة متاجر سلة وزد، وبرامج المؤثرين، والتقارير الشهرية. وفوق ذلك، أصنع المحتوى وأُمنتج الفيديو بنفسي، وساهمت في صناعة المحتوى ومونتاج الفيديو لـ<b>إمارة منطقة المدينة المنورة</b>.</span>
+      </p>
+      <div class="ctas">
+        <a class="btn btn-red" href="#emirate"><span class="t" lang="en">See the work</span><span class="t" lang="ar">شاهد الأعمال</span>
+          <svg class="dir" viewBox="0 0 16 16" fill="none" aria-hidden="true"><path d="M3 8h10M9 4l4 4-4 4" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"/></svg></a>
+        <a class="btn btn-ghost" href="#contact"><span class="t" lang="en">Get in touch</span><span class="t" lang="ar">تواصل معي</span></a>
+      </div>
+      <div class="channels">
+        <span class="lab"><span class="t" lang="en">Channels I run</span><span class="t" lang="ar">قنوات أديرها</span></span>
+        <b>Snapchat</b><b>TikTok</b><b>Instagram</b><b>X</b><b>Meta</b><b>Google</b><b>Salla</b><b>Zid</b>
+      </div>
+    </div>
+    <div class="vf-wrap">
+      <div class="vf">
+        <video id="reel" src="assets/video/showreel.mp4" poster="assets/video/showreel-poster.webp" muted loop playsinline autoplay preload="auto" aria-label="Showreel of my work"></video>
+        <div class="hud" aria-hidden="true">
+          <span class="c c1"></span><span class="c c2"></span><span class="c c3"></span><span class="c c4"></span>
+          <div class="row r1"><span class="rec">REC</span><span id="reelTc">00:00:00:00</span><span class="dim">9:16 · 30P</span></div>
+          <span class="cross"></span>
+          <div class="row r2"><span class="dim">24.4672°N 39.6112°E</span><span>MEDINA</span></div>
+        </div>
+      </div>
+      <div class="vf-cap">
+        <span><span class="t" lang="en">Showreel: cuts from my work, 2025–26</span><span class="t" lang="ar">مقتطفات من أعمالي، 2025–2026</span></span>
+        <button class="icon-btn" id="reelBtn" type="button"></button>
+      </div>
+    </div>
+  </div>
+</section>
+
+<div class="ticker" aria-label="Brands and organisations">
+  <span class="ticker-tag"><span class="t" lang="en">Worked with</span><span class="t" lang="ar">عملت مع</span></span>
+  <div class="ticker-view">
+    <div class="ticker-track t" lang="en">
+      <span>Emirate of Madinah Region</span><span>Ask Almadina</span><span>ASK Perfumes</span><span>J WALK</span><span>Ask Almadina Real Estate</span><span>Mayan Art</span><span>Thaniyyah</span><span>Smart Homes</span><span>Desta Spa</span><span>Superpower Trading</span><span>Orient Tourism</span>
+      <span aria-hidden="true">Emirate of Madinah Region</span><span aria-hidden="true">Ask Almadina</span><span aria-hidden="true">ASK Perfumes</span><span aria-hidden="true">J WALK</span><span aria-hidden="true">Ask Almadina Real Estate</span><span aria-hidden="true">Mayan Art</span><span aria-hidden="true">Thaniyyah</span><span aria-hidden="true">Smart Homes</span><span aria-hidden="true">Desta Spa</span><span aria-hidden="true">Superpower Trading</span><span aria-hidden="true">Orient Tourism</span>
+    </div>
+    <div class="ticker-track t" lang="ar">
+      <span>إمارة منطقة المدينة المنورة</span><span>اسأل المدينة</span><span>عطور آسك</span><span>جي ووك</span><span>اسأل المدينة العقارية</span><span>مرسم ميّان</span><span>ثنيّة</span><span>البيوتات الذكية</span><span>ديستا سبا</span><span>سوبر باور التجارية</span><span>أورينت للسياحة</span>
+      <span aria-hidden="true">إمارة منطقة المدينة المنورة</span><span aria-hidden="true">اسأل المدينة</span><span aria-hidden="true">عطور آسك</span><span aria-hidden="true">جي ووك</span><span aria-hidden="true">اسأل المدينة العقارية</span><span aria-hidden="true">مرسم ميّان</span><span aria-hidden="true">ثنيّة</span><span aria-hidden="true">البيوتات الذكية</span><span aria-hidden="true">ديستا سبا</span><span aria-hidden="true">سوبر باور التجارية</span><span aria-hidden="true">أورينت للسياحة</span>
+    </div>
+  </div>
+</div>
+
+<!-- ================= HIGHLIGHTS ================= -->
+<section class="sec highlights" aria-labelledby="hl-h">
+  <div class="wrap">
+    <div class="sec-head">
+      <p class="eyebrow"><span class="t" lang="en">In numbers</span><span class="t" lang="ar">بالأرقام</span></p>
+      <h2 id="hl-h" class="display">
+        <span class="t" lang="en">Highlights</span>
+        <span class="t ar-h" lang="ar"><img class="ar-type" src="assets/type/ar-h-highlights.svg" alt="أبرز ما قدّمت" style="--wem:4.767"></span>
+      </h2>
+    </div>
+    <div class="stats">
+      <div class="stat">
+        <div class="stat-num">20</div>
+        <p class="stat-label"><span class="t" lang="en">Medina creators in one influencer campaign I ran for ASK Perfumes.</span><span class="t" lang="ar">صانع محتوى من المدينة في حملة مؤثرين واحدة أدرتها لعطور آسك.</span></p>
+        <p class="stat-src"><span class="t" lang="en">ASK Perfumes · 2026</span><span class="t" lang="ar">عطور آسك · 2026</span></p>
+      </div>
+      <div class="stat">
+        <div class="stat-num">6</div>
+        <p class="stat-label"><span class="t" lang="en">Ad and store platforms I run every day: Snapchat, TikTok, Meta, Google, Salla and Zid.</span><span class="t" lang="ar">منصات إعلانية ومتاجر أديرها يوميًا: سناب شات وتيك توك وميتا وقوقل وسلة وزد.</span></p>
+        <p class="stat-src"><span class="t" lang="en">Daily work · 2026</span><span class="t" lang="ar">العمل اليومي · 2026</span></p>
+      </div>
+      <div class="stat">
+        <div class="stat-num">3.3M<small>+</small></div>
+        <p class="stat-label"><span class="t" lang="en">People follow the Ask Almadina platform I market and create content for.</span><span class="t" lang="ar">يتابعون منصة اسأل المدينة التي أسوّق لها وأصنع محتواها.</span></p>
+        <p class="stat-src"><span class="t" lang="en">Public profiles · 2026</span><span class="t" lang="ar">الحسابات العامة · 2026</span></p>
+      </div>
+      <div class="stat">
+        <div class="stat-num">326.7K</div>
+        <p class="stat-label"><span class="t" lang="en">Views on a single news video I edited.</span><span class="t" lang="ar">مشاهدة لمقطع إخباري واحد قمت بمونتاجه.</span></p>
+        <p class="stat-src"><span class="t" lang="en">TikTok · Aug 2026</span><span class="t" lang="ar">تيك توك · أغسطس 2026</span></p>
+      </div>
+    </div>
+    <p class="privacy"><svg viewBox="0 0 16 16" fill="none" aria-hidden="true"><rect x="3" y="7" width="10" height="7" rx="1.5" stroke="currentColor" stroke-width="1.5"/><path d="M5.5 7V5a2.5 2.5 0 015 0v2" stroke="currentColor" stroke-width="1.5"/></svg>
+      <span><span class="t" lang="en">Client sales, budgets and ad results stay private. Every number on this page is public or my own output.</span><span class="t" lang="ar">مبيعات العملاء وميزانياتهم ونتائج إعلاناتهم تبقى سرية. كل رقم في هذه الصفحة عام أو من إنتاجي.</span></span></p>
+  </div>
+</section>
+
+<!-- ================= EMIRATE ================= -->
+<section id="emirate" class="emirate" aria-labelledby="em-h">
+  <video class="em-bg" src="assets/video/showreel.mp4" muted loop playsinline autoplay preload="none" aria-hidden="true" tabindex="-1"></video>
+  <div class="wrap">
+    <div class="em-grid">
+      <img class="em-logo" src="assets/img/logo-emirate-white.png" alt="Emirate of Madinah Region logo" width="640" height="570">
+      <div class="em-copy">
+        <p class="eyebrow"><span class="t" lang="en">Featured contribution</span><span class="t" lang="ar">مساهمة مميزة</span></p>
+        <h2 id="em-h" class="display">
+          <span class="t" lang="en">Content creation and video montage for the <em>Emirate of Madinah Region</em></span>
+          <span class="t ar-h" lang="ar"><img class="ar-type" src="assets/type/ar-emirate.svg" alt="صناعة المحتوى ومونتاج الفيديو لإمارة منطقة المدينة المنورة" style="--wem:11.911"></span>
+        </h2>
+        <p><span class="t" lang="en">Through Ask Almadina, I contribute to content creation and video montage for the official channels of the Emirate of Madinah Region: news coverage, announcements and explainers, made for vertical screens.</span><span class="t" lang="ar">من خلال اسأل المدينة، أساهم في صناعة المحتوى ومونتاج الفيديو للقنوات الرسمية لإمارة منطقة المدينة المنورة: تغطيات إخبارية، وإعلانات، وفيديوهات تعريفية، مصممة للشاشات العمودية.</span></p>
+        <ul class="em-list t" lang="en">
+          <li>Coverage of His Highness the Deputy Emir’s receptions</li>
+          <li>Council of Ministers decisions and royal orders, made clear and short</li>
+          <li>Animated explainers of the region and its governorates</li>
+          <li>Launches of regional programs, like the first media school for gifted students</li>
+        </ul>
+        <ul class="em-list t" lang="ar">
+          <li>تغطية استقبالات سمو نائب أمير منطقة المدينة المنورة</li>
+          <li>قرارات مجلس الوزراء والأوامر الملكية بأسلوب واضح ومختصر</li>
+          <li>فيديوهات تعريفية متحركة بالمنطقة ومحافظاتها</li>
+          <li>إطلاق برامج المنطقة، مثل أول مدرسة إعلامية للموهوبين</li>
+        </ul>
+        <span class="official"><i></i>@IMARAT_ALMADINA · ALMADINAH.GOV.SA</span>
+      </div>
+    </div>
+    <div class="rail-head">
+      <span class="lab"><span class="t" lang="en">On the Emirate’s official channels · 8 videos</span><span class="t" lang="ar">على القنوات الرسمية للإمارة · 8 فيديوهات</span></span>
+      <div class="arrows">
+        <button type="button" data-rail="emRail" data-dir="-1" aria-label="Previous"><svg viewBox="0 0 16 16" fill="none" aria-hidden="true"><path d="M10 3L5 8l5 5" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg></button>
+        <button type="button" data-rail="emRail" data-dir="1" aria-label="Next"><svg viewBox="0 0 16 16" fill="none" aria-hidden="true"><path d="M6 3l5 5-5 5" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg></button>
+      </div>
+    </div>
+    <div class="rail" id="emRail" data-vgroup>
+      <article class="vcard" data-src="assets/video/em-media.mp4" data-en="First media school for gifted students" data-ar="أول مدرسة إعلامية للموهوبين">
+        <div class="vthumb"><video src="assets/video/em-media.mp4" poster="assets/video/em-media-poster.webp" preload="none" muted loop playsinline></video><span class="dur">0:48</span><span class="vplay"><svg viewBox="0 0 16 16" aria-hidden="true"><path d="M3 1.8v12.4L14 8z" fill="currentColor"/></svg></span></div>
+        <span class="vtag"><span class="t" lang="en">Announcement</span><span class="t" lang="ar">إعلان</span></span>
+        <h4><span class="t" lang="en">First media school for gifted students</span><span class="t" lang="ar">أول مدرسة إعلامية للموهوبين</span></h4>
+      </article>
+      <article class="vcard" data-src="assets/video/em-map.mp4" data-en="Madinah Region: heritage that extends, a future being built" data-ar="منطقة المدينة المنورة: أصالة تمتد ومستقبل يُبنى">
+        <div class="vthumb"><video src="assets/video/em-map.mp4" poster="assets/video/em-map-poster.webp" preload="none" muted loop playsinline></video><span class="dur">0:50</span><span class="vplay"><svg viewBox="0 0 16 16" aria-hidden="true"><path d="M3 1.8v12.4L14 8z" fill="currentColor"/></svg></span></div>
+        <span class="vtag"><span class="t" lang="en">Explainer</span><span class="t" lang="ar">فيديو تعريفي</span></span>
+        <h4><span class="t" lang="en">Madinah Region and its governorates</span><span class="t" lang="ar">منطقة المدينة المنورة ومحافظاتها</span></h4>
+      </article>
+      <article class="vcard" data-src="assets/video/em-council.mp4" data-en="Council of Ministers decisions" data-ar="قرارات مجلس الوزراء">
+        <div class="vthumb"><video src="assets/video/em-council.mp4" poster="assets/video/em-council-poster.webp" preload="none" muted loop playsinline></video><span class="dur">0:53</span><span class="vplay"><svg viewBox="0 0 16 16" aria-hidden="true"><path d="M3 1.8v12.4L14 8z" fill="currentColor"/></svg></span></div>
+        <span class="vtag"><span class="t" lang="en">News</span><span class="t" lang="ar">أخبار</span></span>
+        <h4><span class="t" lang="en">Council of Ministers decisions</span><span class="t" lang="ar">قرارات مجلس الوزراء</span></h4>
+      </article>
+      <article class="vcard" data-src="assets/video/em-reception-1.mp4" data-en="The Deputy Emir receives Eng. Rakan Al-Fakhri" data-ar="سمو نائب أمير المنطقة يستقبل المهندس راكان الفاخري">
+        <div class="vthumb"><video src="assets/video/em-reception-1.mp4" poster="assets/video/em-reception-1-poster.webp" preload="none" muted loop playsinline></video><span class="dur">0:43</span><span class="vplay"><svg viewBox="0 0 16 16" aria-hidden="true"><path d="M3 1.8v12.4L14 8z" fill="currentColor"/></svg></span></div>
+        <span class="vtag"><span class="t" lang="en">Coverage</span><span class="t" lang="ar">تغطية</span></span>
+        <h4><span class="t" lang="en">Deputy Emir’s reception</span><span class="t" lang="ar">استقبال سمو نائب أمير المنطقة</span></h4>
+      </article>
+      <article class="vcard" data-src="assets/video/em-ehsan.mp4" data-en="Royal orders: Ehsan" data-ar="أوامر ملكية: إحسان">
+        <div class="vthumb"><video src="assets/video/em-ehsan.mp4" poster="assets/video/em-ehsan-poster.webp" preload="none" muted loop playsinline></video><span class="dur">0:32</span><span class="vplay"><svg viewBox="0 0 16 16" aria-hidden="true"><path d="M3 1.8v12.4L14 8z" fill="currentColor"/></svg></span></div>
+        <span class="vtag"><span class="t" lang="en">News</span><span class="t" lang="ar">أخبار</span></span>
+        <h4><span class="t" lang="en">Royal orders: Ehsan</span><span class="t" lang="ar">أوامر ملكية: إحسان</span></h4>
+      </article>
+      <article class="vcard" data-src="assets/video/em-reception-2.mp4" data-en="The Deputy Emir receives the region’s Director General of Education" data-ar="سمو نائب أمير المنطقة يستقبل مدير عام التعليم بالمنطقة">
+        <div class="vthumb"><video src="assets/video/em-reception-2.mp4" poster="assets/video/em-reception-2-poster.webp" preload="none" muted loop playsinline></video><span class="dur">0:47</span><span class="vplay"><svg viewBox="0 0 16 16" aria-hidden="true"><path d="M3 1.8v12.4L14 8z" fill="currentColor"/></svg></span></div>
+        <span class="vtag"><span class="t" lang="en">Coverage</span><span class="t" lang="ar">تغطية</span></span>
+        <h4><span class="t" lang="en">Meeting on education in the region</span><span class="t" lang="ar">لقاء حول التعليم في المنطقة</span></h4>
+      </article>
+      <article class="vcard" data-src="assets/video/em-tech.mp4" data-en="From idea to real experience: a tech program launch" data-ar="من الفكرة إلى تجربة واقعية: إطلاق برنامج تقني">
+        <div class="vthumb"><video src="assets/video/em-tech.mp4" poster="assets/video/em-tech-poster.webp" preload="none" muted loop playsinline></video><span class="dur">0:45</span><span class="vplay"><svg viewBox="0 0 16 16" aria-hidden="true"><path d="M3 1.8v12.4L14 8z" fill="currentColor"/></svg></span></div>
+        <span class="vtag"><span class="t" lang="en">Announcement</span><span class="t" lang="ar">إعلان</span></span>
+        <h4><span class="t" lang="en">From idea to real experience</span><span class="t" lang="ar">من الفكرة إلى تجربة واقعية</span></h4>
+      </article>
+      <article class="vcard" data-src="assets/video/em-news.mp4" data-en="Saudi Arabia ranks first in the region" data-ar="السعودية الأولى إقليميًا">
+        <div class="vthumb"><video src="assets/video/em-news.mp4" poster="assets/video/em-news-poster.webp" preload="none" muted loop playsinline></video><span class="dur">0:31</span><span class="vplay"><svg viewBox="0 0 16 16" aria-hidden="true"><path d="M3 1.8v12.4L14 8z" fill="currentColor"/></svg></span></div>
+        <span class="vtag"><span class="t" lang="en">Infographic</span><span class="t" lang="ar">إنفوجرافيك</span></span>
+        <h4><span class="t" lang="en">Saudi Arabia, first in the region</span><span class="t" lang="ar">السعودية الأولى إقليميًا</span></h4>
+      </article>
+    </div>
+  </div>
+</section>
+
+<!-- ================= SELECTED WORK ================= -->
+<section id="work" class="sec" aria-labelledby="work-h">
+  <div class="wrap">
+    <div class="sec-head">
+      <p class="eyebrow"><span class="t" lang="en">Selected work</span><span class="t" lang="ar">أعمال مختارة</span></p>
+      <h2 id="work-h" class="display">
+        <span class="t" lang="en">Four brands, <em>four stories</em></span>
+        <span class="t ar-h" lang="ar"><img class="ar-type" src="assets/type/ar-h-work.svg" alt="أربع علامات، وأربع قصص" style="--wem:9.561"></span>
+      </h2>
+      <p><span class="t" lang="en">Each one went through the same loop: read the brand, write the plan, launch, then keep what works.</span><span class="t" lang="ar">مرّت كل واحدة بنفس الدورة: أقرأ العلامة، وأكتب الخطة، وأطلق، ثم أحتفظ بما ينجح.</span></p>
+    </div>
+
+    <!-- ===== ASK ALMADINA ===== -->
+    <article class="case" id="almadina">
+      <div class="case-grid">
+        <div class="case-text">
+          <div class="case-id">
+            <span class="logo-chip" style="--chip-bg:#000"><img src="assets/img/logo-ask-almadina.webp" alt="Ask Almadina logo" width="500" height="500"></span>
+            <div class="who"><strong><span class="t" lang="en">Ask Almadina</span><span class="t" lang="ar">اسأل المدينة</span></strong><span><span class="t" lang="en">Digital media platform · Medina</span><span class="t" lang="ar">منصة إعلامية رقمية · المدينة المنورة</span></span></div>
+          </div>
+          <h3>
+            <span class="t" lang="en">Daily content for a platform followed by 3.3M+ people</span>
+            <span class="t ar-h" lang="ar"><img class="ar-type" src="assets/type/ar-c-almadina.svg" alt="محتوى يومي لمنصة يتابعها أكثر من 3.3 مليون" style="--wem:9.561"></span>
+          </h3>
+          <dl class="meta">
+            <dt><span class="t" lang="en">Role</span><span class="t" lang="ar">الدور</span></dt><dd><span class="t" lang="en">Marketing Specialist</span><span class="t" lang="ar">أخصائي تسويق</span></dd>
+            <dt><span class="t" lang="en">When</span><span class="t" lang="ar">الفترة</span></dt><dd><span class="t" lang="en">Mar 2026 – present</span><span class="t" lang="ar">مارس 2026 – الآن</span></dd>
+            <dt><span class="t" lang="en">Channels</span><span class="t" lang="ar">القنوات</span></dt><dd>Snapchat · TikTok · Instagram · X · Facebook · YouTube</dd>
+          </dl>
+          <p class="brief"><span class="t" lang="en">Ask Almadina is a digital media platform from the heart of Medina, covering the city’s news, projects and daily life. I work across its channels, its brands and the content it produces for partners, including the Emirate of Madinah Region.</span><span class="t" lang="ar">اسأل المدينة منصة إعلامية رقمية من قلب المدينة المنورة، تغطي أخبار المدينة ومشاريعها وحياتها اليومية. أعمل على قنواتها وعلاماتها التجارية والمحتوى الذي تنتجه لشركائها، ومنهم إمارة منطقة المدينة المنورة.</span></p>
+          <p class="did-h"><span class="t" lang="en">What I did</span><span class="t" lang="ar">ما قمت به</span></p>
+          <ul class="did t" lang="en">
+            <li>Content creation and video montage for the official channels of the Emirate of Madinah Region.</li>
+            <li>Edited daily news videos for TikTok, Snapchat and Instagram, including a school-admissions story watched 326.7K times.</li>
+            <li>Produced infographic and explainer videos that turn city projects and figures into short, clear stories.</li>
+            <li>Wrote monthly content plans and pitch decks for partners across Medina.</li>
+            <li>Created the name story, identity and pitch for <bdi>«ثنيّة»</bdi>, a documentary series on Medina’s history and daily life.</li>
+          </ul>
+          <ul class="did t" lang="ar">
+            <li>صناعة المحتوى ومونتاج الفيديو للقنوات الرسمية لإمارة منطقة المدينة المنورة.</li>
+            <li>مونتاج المقاطع الإخبارية اليومية لتيك توك وسناب شات وإنستقرام، ومنها خبر القبول في المدارس الذي شوهد 326.7 ألف مرة.</li>
+            <li>إنتاج فيديوهات إنفوجرافيك وشرح تحوّل مشاريع المدينة وأرقامها إلى قصص قصيرة وواضحة.</li>
+            <li>كتابة خطط المحتوى الشهرية والعروض التقديمية لشركاء في المدينة المنورة.</li>
+            <li>صناعة قصة الاسم والهوية والعرض التقديمي لـ«ثنيّة»، سلسلة وثائقية عن تاريخ المدينة وحياتها اليومية.</li>
+          </ul>
+          <div class="deliv t" lang="en"><span>News montage</span><span>Infographic video</span><span>Content plans</span><span>Pitch decks</span><span>Series identity</span></div>
+          <div class="deliv t" lang="ar"><span>مونتاج الأخبار</span><span>فيديو إنفوجرافيك</span><span>خطط المحتوى</span><span>عروض تقديمية</span><span>هوية سلسلة</span></div>
+        </div>
+        <div class="board" data-gallery data-vgroup>
+          <div class="board-head"><b>ASK ALMADINA</b><span>2026</span></div>
+          <div class="row">
+            <figure class="tile" style="--ar:1.777"><img src="assets/img/am-followers.webp" alt="Ask Almadina followers by platform" loading="lazy" data-en="Ask Almadina: 3.3M+ followers across platforms" data-ar="اسأل المدينة: أكثر من 3.3 مليون متابع على المنصات"></figure>
+          </div>
+          <div class="row wrap-sm">
+            <figure class="tile vt" style="--ar:.5625" data-src="assets/video/v-nusuk.mp4" data-en="Before you visit the Rawdah: booking on Nusuk" data-ar="قبل ما تتوجه للروضة الشريفة: الحجز عبر نسك"><video src="assets/video/v-nusuk.mp4" poster="assets/video/v-nusuk-poster.webp" preload="none" muted loop playsinline></video><span class="dur">0:45</span><span class="vplay"><svg viewBox="0 0 16 16" aria-hidden="true"><path d="M3 1.8v12.4L14 8z" fill="currentColor"/></svg></span></figure>
+            <figure class="tile" style="--ar:.563"><img src="assets/img/am-q2-views.webp" alt="Ask Almadina Q2 2026 views post" loading="lazy" data-en="Public post: 300M+ views in Q2 2026" data-ar="منشور عام: أكثر من 300 مليون مشاهدة في الربع الثاني 2026"></figure>
+            <figure class="tile vt" style="--ar:.5625" data-src="assets/video/v-medai.mp4" data-en="MED Ai forum, day one" data-ar="ملتقى MED Ai للذكاء الاصطناعي: اليوم الأول"><video src="assets/video/v-medai.mp4" poster="assets/video/v-medai-poster.webp" preload="none" muted loop playsinline></video><span class="dur">0:45</span><span class="vplay"><svg viewBox="0 0 16 16" aria-hidden="true"><path d="M3 1.8v12.4L14 8z" fill="currentColor"/></svg></span></figure>
+          </div>
+          <div class="row wrap-sm">
+            <figure class="tile" style="--ar:1.778"><img src="assets/img/th-id-cover.webp" alt="Thaniyyah identity cover" loading="lazy" data-en="Thaniyyah documentary series: identity" data-ar="سلسلة «ثنيّة» الوثائقية: الهوية"></figure>
+            <figure class="tile" style="--ar:1.778"><img src="assets/img/th-id-logos.webp" alt="Thaniyyah logo versions" loading="lazy" data-en="Thaniyyah: logo versions" data-ar="«ثنيّة»: نسخ الشعار"></figure>
+          </div>
+          <div class="row wrap-sm">
+            <figure class="tile" style="--ar:.563"><img src="assets/img/mo-whitelands.webp" alt="White lands infographic frame" loading="lazy" data-en="Infographic: 19M m² of white lands" data-ar="إنفوجرافيك: 19 مليون م² من الأراضي البيضاء"></figure>
+            <figure class="tile" style="--ar:.563"><img src="assets/img/mo-hotels.webp" alt="Hotel occupancy infographic frame" loading="lazy" data-en="Infographic: hotel occupancy across 13 regions" data-ar="إنفوجرافيك: إشغال الفنادق في 13 منطقة"></figure>
+            <figure class="tile" style="--ar:.563"><img src="assets/img/mo-health.webp" alt="Cardiac centre infographic frame" loading="lazy" data-en="Infographic: cardiac centre" data-ar="إنفوجرافيك: مركز القلب"></figure>
+            <figure class="tile" style="--ar:.563"><img src="assets/img/mo-parks.webp" alt="National parks infographic frame" loading="lazy" data-en="Infographic: 11 opportunities in national parks" data-ar="إنفوجرافيك: 11 فرصة في المتنزهات الوطنية"></figure>
+          </div>
+        </div>
+      </div>
+    </article>
+
+    <!-- ===== ASK PERFUMES ===== -->
+    <article class="case" id="ask">
+      <div class="case-grid">
+        <div class="case-text">
+          <div class="case-id">
+            <span class="logo-chip" style="--chip-bg:#1F2E27"><img src="assets/img/logo-ask-light.png" alt="ASK Perfumes logo" width="400" height="400"></span>
+            <div class="who"><strong><span class="t" lang="en">ASK Perfumes</span><span class="t" lang="ar">عطور آسك</span></strong><span><span class="t" lang="en">Niche perfume brand · Salla store</span><span class="t" lang="ar">علامة عطور نيش · متجر سلة</span></span></div>
+          </div>
+          <h3>
+            <span class="t" lang="en">From a quiet brand to a presence on every platform</span>
+            <span class="t ar-h" lang="ar"><img class="ar-type" src="assets/type/ar-c-ask.svg" alt="من علامة صامتة إلى حضور في كل منصة" style="--wem:8.128"></span>
+          </h3>
+          <dl class="meta">
+            <dt><span class="t" lang="en">Role</span><span class="t" lang="ar">الدور</span></dt><dd><span class="t" lang="en">Marketing Specialist, Ask Almadina group</span><span class="t" lang="ar">أخصائي تسويق، مجموعة اسأل المدينة</span></dd>
+            <dt><span class="t" lang="en">When</span><span class="t" lang="ar">الفترة</span></dt><dd><span class="t" lang="en">Apr 2026 – present</span><span class="t" lang="ar">أبريل 2026 – الآن</span></dd>
+            <dt><span class="t" lang="en">Channels</span><span class="t" lang="ar">القنوات</span></dt><dd>Snapchat · TikTok · Meta · Google · WhatsApp · Salla</dd>
+          </dl>
+          <p class="brief"><span class="t" lang="en">ASK is a Medina-born perfume brand with the line “The World in a Bottle”. When I joined, it had no paid media and no creator network. I built both, alongside the content, the launches and the store.</span><span class="t" lang="ar">آسك علامة عطور انطلقت من المدينة المنورة بشعار «العالم في زجاجة عطر». عند انضمامي لم تكن لديها إعلانات ممولة ولا شبكة مؤثرين، فبنيت الاثنين، إلى جانب المحتوى والإطلاقات والمتجر.</span></p>
+          <p class="did-h"><span class="t" lang="en">What I did</span><span class="t" lang="ar">ما قمت به</span></p>
+          <ul class="did t" lang="en">
+            <li>Studied the brand against Saudi competitors, then built paid ads on Snapchat, TikTok, Meta and Google with audience tests and proper tracking.</li>
+            <li>Ran an influencer program with 20 Medina creators in one wave, each with a gift box, a personal brief and their own discount code.</li>
+            <li>Built a celebrity collaboration around a signature bundle the creator curated himself.</li>
+            <li>Launched new scents, Honey and Night, with teasers, reels and an Instagram contest that filled the comments.</li>
+            <li>Planned seasonal campaigns, from Eid offers to National Day 96, with offers, bundles and coupons on the Salla store.</li>
+            <li>Directed AI-assisted cinematic campaigns and started a storytelling TikTok page.</li>
+            <li>Reported to management every month with a full store and ads review.</li>
+          </ul>
+          <ul class="did t" lang="ar">
+            <li>درست العلامة مقارنةً بالمنافسين السعوديين، ثم بنيت الإعلانات الممولة على سناب شات وتيك توك وميتا وقوقل، مع اختبارات للجمهور وتتبع صحيح.</li>
+            <li>أدرت برنامج مؤثرين ضم 20 صانع محتوى من المدينة في موجة واحدة، لكلٍّ منهم بكج هدية وبريف خاص وكود خصم مستقل.</li>
+            <li>بنيت تعاونًا مع أحد المشاهير حول بكج مميز اختاره بنفسه.</li>
+            <li>أطلقت عطور «هني» و«نايت» الجديدة بإعلانات تشويقية وريلز ومسابقة على إنستقرام امتلأت بالتعليقات.</li>
+            <li>خططت للحملات الموسمية من عروض العيد إلى اليوم الوطني 96، بالعروض والباقات والكوبونات على متجر سلة.</li>
+            <li>أدرت حملات سينمائية بمساعدة الذكاء الاصطناعي، وأطلقت صفحة تيك توك قصصية.</li>
+            <li>قدّمت للإدارة مراجعة شهرية كاملة للمتجر والإعلانات.</li>
+          </ul>
+          <div class="deliv t" lang="en"><span>Paid ads</span><span>Influencer program</span><span>Product launches</span><span>Seasonal campaigns</span><span>Salla store</span><span>Monthly reports</span></div>
+          <div class="deliv t" lang="ar"><span>الإعلانات الممولة</span><span>برنامج المؤثرين</span><span>إطلاق المنتجات</span><span>الحملات الموسمية</span><span>متجر سلة</span><span>التقارير الشهرية</span></div>
+        </div>
+        <div class="board" data-gallery data-vgroup>
+          <div class="board-head"><b>ASK PERFUMES</b><span>2026</span></div>
+          <div class="row">
+            <figure class="tile" style="--ar:.8"><img src="assets/img/ask-cloud-editorial.webp" alt="ASK Cloud perfume editorial post" loading="lazy" data-en="Cloud: editorial product post" data-ar="كلاود: منشور تحريري للمنتج"></figure>
+            <figure class="tile" style="--ar:.8"><img src="assets/img/ask-elite.webp" alt="ASK Elite package post" loading="lazy" data-en="The Elite package key visual" data-ar="التصميم الرئيسي لبكج النخبة"></figure>
+          </div>
+          <div class="row">
+            <figure class="tile" style="--ar:2.332"><img src="assets/img/ask-natday-hero.webp" alt="ASK National Day 96 store banner" loading="lazy" data-en="National Day 96 store banner" data-ar="بانر المتجر لليوم الوطني 96"></figure>
+          </div>
+          <div class="row wrap-sm">
+            <figure class="tile" style="--ar:.805"><img src="assets/img/ask-magic-touch.webp" alt="The Magic Touch campaign visual" loading="lazy" data-en="“The Magic Touch”: AI-assisted cinematic campaign" data-ar="«اللمسة السحرية»: حملة سينمائية بمساعدة الذكاء الاصطناعي"></figure>
+            <figure class="tile" style="--ar:.8"><img src="assets/img/ask-honey-night.webp" alt="Honey and Night launch post" loading="lazy" data-en="Honey &amp; Night launch" data-ar="إطلاق هني ونايت"></figure>
+            <figure class="tile vt" style="--ar:.5625" data-src="assets/video/v-ask-natday.mp4" data-en="ASK · National Day 96 reel" data-ar="آسك · ريل اليوم الوطني 96"><video src="assets/video/v-ask-natday.mp4" poster="assets/video/v-ask-natday-poster.webp" preload="none" muted loop playsinline></video><span class="dur">0:12</span><span class="vplay"><svg viewBox="0 0 16 16" aria-hidden="true"><path d="M3 1.8v12.4L14 8z" fill="currentColor"/></svg></span></figure>
+          </div>
+          <div class="row wrap-sm">
+            <figure class="tile" style="--ar:.8"><img src="assets/img/ask-luca-moss.webp" alt="Luca perfume on moss" loading="lazy" data-en="Luca: product key visual" data-ar="لوكا: تصميم رئيسي للمنتج"></figure>
+            <figure class="tile" style="--ar:1"><img src="assets/img/ask-six-senses.webp" alt="Six Senses discovery box" loading="lazy" data-en="The Six Senses box" data-ar="بكج الحواس الستّ"></figure>
+            <figure class="tile" style="--ar:.8"><img src="assets/img/ask-cloud-offer.webp" alt="Cloud summer post" loading="lazy" data-en="Cloud: the summer perfume" data-ar="كلاود: عطر الصيف"></figure>
+          </div>
+        </div>
+      </div>
+    </article>
+
+    <!-- ===== J WALK ===== -->
+    <article class="case" id="jwalk">
+      <div class="case-grid">
+        <div class="case-text">
+          <div class="case-id">
+            <span class="logo-chip" style="--chip-bg:#000"><img src="assets/img/logo-jwalk-mark.png" alt="J WALK logo" width="206" height="300"></span>
+            <div class="who"><strong><span class="t" lang="en">J WALK</span><span class="t" lang="ar">جي ووك</span></strong><span><span class="t" lang="en">Family destination · Medina</span><span class="t" lang="ar">وجهة عائلية · المدينة المنورة</span></span></div>
+          </div>
+          <h3>
+            <span class="t" lang="en">Opening a destination on National Day</span>
+            <span class="t ar-h" lang="ar"><img class="ar-type" src="assets/type/ar-c-jwalk.svg" alt="افتتاح وجهة في اليوم الوطني" style="--wem:5.472"></span>
+          </h3>
+          <dl class="meta">
+            <dt><span class="t" lang="en">Role</span><span class="t" lang="ar">الدور</span></dt><dd><span class="t" lang="en">Marketing plan, social accounts and reporting</span><span class="t" lang="ar">الخطة التسويقية وإدارة الحسابات والتقارير</span></dd>
+            <dt><span class="t" lang="en">When</span><span class="t" lang="ar">الفترة</span></dt><dd><span class="t" lang="en">Aug 2026 – present</span><span class="t" lang="ar">أغسطس 2026 – الآن</span></dd>
+            <dt><span class="t" lang="en">Channels</span><span class="t" lang="ar">القنوات</span></dt><dd>TikTok · Instagram · Snapchat · X · Facebook · LinkedIn</dd>
+          </dl>
+          <p class="brief"><span class="t" lang="en">J WALK is a green family walk near the Prophet’s Mosque, with a walking track, a dancing fountain and retail kiosks. It needed a grand opening on National Day 96 and social accounts that people actually watch.</span><span class="t" lang="ar">جي ووك ممشى أخضر للعائلات قريب من المسجد النبوي، فيه مسار للمشي ونافورة راقصة وأكشاك تجارية. كان يحتاج افتتاحًا كبيرًا في اليوم الوطني 96، وحسابات يتابعها الناس فعلًا.</span></p>
+          <p class="did-h"><span class="t" lang="en">What I did</span><span class="t" lang="ar">ما قمت به</span></p>
+          <ul class="did t" lang="en">
+            <li>Wrote the marketing plan, from pre-opening teasers to the National Day grand opening and beyond.</li>
+            <li>Planned monthly content across five platforms, with a run-of-show for opening day and reel concepts.</li>
+            <li>Produced the creative: AI-assisted teasers, the National Day family post and the event videos.</li>
+            <li>Ran a “Film J WALK and win” contest that turned visitors into content creators.</li>
+            <li>Reported every month, then planned October around Pink October, Teachers’ Day and a photo contest.</li>
+          </ul>
+          <ul class="did t" lang="ar">
+            <li>كتبت الخطة التسويقية، من الإعلانات التشويقية قبل الافتتاح إلى افتتاح اليوم الوطني وما بعده.</li>
+            <li>خططت المحتوى الشهري على خمس منصات، مع جدول تشغيل ليوم الافتتاح وأفكار للريلز.</li>
+            <li>أنتجت التصاميم: إعلانات تشويقية بمساعدة الذكاء الاصطناعي، ومنشور العائلة لليوم الوطني، وفيديوهات الفعاليات.</li>
+            <li>أطلقت مسابقة «صوّر الجي ووك واربح» التي حوّلت الزوار إلى صنّاع محتوى.</li>
+            <li>قدّمت تقريرًا كل شهر، ثم خططت لأكتوبر حول أكتوبر الوردي ويوم المعلم ومسابقة تصوير.</li>
+          </ul>
+          <div class="deliv t" lang="en"><span>Marketing plan</span><span>Opening campaign</span><span>Content calendar</span><span>Contests</span><span>Monthly reports</span></div>
+          <div class="deliv t" lang="ar"><span>الخطة التسويقية</span><span>حملة الافتتاح</span><span>تقويم المحتوى</span><span>المسابقات</span><span>التقارير الشهرية</span></div>
+        </div>
+        <div class="board" data-gallery data-vgroup>
+          <div class="board-head"><b>J WALK</b><span>2026</span></div>
+          <div class="row wrap-sm">
+            <figure class="tile" style="--ar:.8"><img src="assets/img/jw-natday-teaser.webp" alt="J WALK National Day teaser" loading="lazy" data-en="Teaser: “Something big is being prepared for National Day”" data-ar="تشويق: «شيء كبير يُحضّر ليوم الوطن»"></figure>
+            <figure class="tile" style="--ar:.8"><img src="assets/img/jw-natday-family.webp" alt="J WALK National Day family post" loading="lazy" data-en="National Day family post" data-ar="منشور العائلة لليوم الوطني"></figure>
+            <figure class="tile vt" style="--ar:.5625" data-src="assets/video/v-jwalk-events.mp4" data-en="The celebrations continue at J WALK" data-ar="الاحتفالات مستمرة في جي ووك"><video src="assets/video/v-jwalk-events.mp4" poster="assets/video/v-jwalk-events-poster.webp" preload="none" muted loop playsinline></video><span class="dur">0:11</span><span class="vplay"><svg viewBox="0 0 16 16" aria-hidden="true"><path d="M3 1.8v12.4L14 8z" fill="currentColor"/></svg></span></figure>
+          </div>
+          <div class="row wrap-sm">
+            <figure class="tile vt" style="--ar:.5625" data-src="assets/video/v-jwalk-fountain.mp4" data-en="National Day programme at J WALK" data-ar="برنامج اليوم الوطني في جي ووك"><video src="assets/video/v-jwalk-fountain.mp4" poster="assets/video/v-jwalk-fountain-poster.webp" preload="none" muted loop playsinline></video><span class="dur">0:34</span><span class="vplay"><svg viewBox="0 0 16 16" aria-hidden="true"><path d="M3 1.8v12.4L14 8z" fill="currentColor"/></svg></span></figure>
+            <figure class="tile" style="--ar:.8"><img src="assets/img/jw-teachers.webp" alt="J WALK Teachers' Day post" loading="lazy" data-en="World Teachers’ Day post" data-ar="منشور اليوم العالمي للمعلم"></figure>
+            <figure class="tile" style="--ar:1"><img src="assets/img/jw-teaser-2.webp" alt="J WALK National Day teaser variant" loading="lazy" data-en="Teaser variant for National Day" data-ar="نسخة تشويقية أخرى لليوم الوطني"></figure>
+          </div>
+        </div>
+      </div>
+    </article>
+
+    <!-- ===== MAYAN ART ===== -->
+    <article class="case" id="myn">
+      <div class="case-grid">
+        <div class="case-text">
+          <div class="case-id">
+            <span class="logo-chip" style="--chip-bg:#000"><img src="assets/img/logo-myn.webp" alt="MYN Art logo" width="400" height="400"></span>
+            <div class="who"><strong><span class="t" lang="en">Mayan Art (MYN)</span><span class="t" lang="ar">مرسم ميّان</span></strong><span><span class="t" lang="en">Art studio · Zid store</span><span class="t" lang="ar">مرسم فني · متجر زد</span></span></div>
+          </div>
+          <h3>
+            <span class="t" lang="en">Turning an art studio into a brand</span>
+            <span class="t ar-h" lang="ar"><img class="ar-type" src="assets/type/ar-c-myn.svg" alt="من مرسم فني إلى علامة تجارية" style="--wem:6.067"></span>
+          </h3>
+          <dl class="meta">
+            <dt><span class="t" lang="en">Role</span><span class="t" lang="ar">الدور</span></dt><dd><span class="t" lang="en">Marketing Assistant</span><span class="t" lang="ar">مساعد تسويق</span></dd>
+            <dt><span class="t" lang="en">When</span><span class="t" lang="ar">الفترة</span></dt><dd><span class="t" lang="en">Nov 2025 – Feb 2026</span><span class="t" lang="ar">نوفمبر 2025 – فبراير 2026</span></dd>
+            <dt><span class="t" lang="en">Channels</span><span class="t" lang="ar">القنوات</span></dt><dd>TikTok · Snapchat · Instagram · Zid</dd>
+          </dl>
+          <p class="brief"><span class="t" lang="en">Mayan Art is a Medina studio with workshops for kids and adults, memberships and a Zid store. Its followers knew the founders better than the brand, so the work was about building the brand itself.</span><span class="t" lang="ar">مرسم ميّان مرسم فني في المدينة المنورة يقدّم ورشًا للأطفال والكبار وعضويات ومتجرًا على زد. كان المتابعون يعرفون المؤسِّستين أكثر من العلامة، فكان العمل على بناء العلامة نفسها.</span></p>
+          <p class="did-h"><span class="t" lang="en">What I did</span><span class="t" lang="ar">ما قمت به</span></p>
+          <ul class="did t" lang="en">
+            <li>Wrote the “One in All” growth proposal in Arabic and English: a customer journey from awareness to loyalty and a 12-month roadmap.</li>
+            <li>Launched TikTok and Snapchat campaigns with local targeting and retargeting.</li>
+            <li>Designed a QR-code membership system to track member visits and loyalty.</li>
+            <li>Rebuilt the organic TikTok plan around strong hooks and educational art content.</li>
+            <li>Planned the monthly execution, campaign creative and workshop calendar with the team.</li>
+          </ul>
+          <ul class="did t" lang="ar">
+            <li>كتبت مقترح النمو «One in All» بالعربية والإنجليزية: رحلة عميل من الوعي حتى الولاء، وخارطة طريق لـ 12 شهرًا.</li>
+            <li>أطلقت حملات تيك توك وسناب شات باستهداف محلي وإعادة استهداف.</li>
+            <li>صمّمت نظام عضويات بالـ QR Code لمتابعة زيارات الأعضاء وولائهم.</li>
+            <li>أعدت بناء خطة تيك توك العضوية حول خطّافات قوية ومحتوى فني تعليمي.</li>
+            <li>خططت للتنفيذ الشهري وتصاميم الحملات وجدول الورش مع الفريق.</li>
+          </ul>
+          <div class="deliv t" lang="en"><span>Growth proposal</span><span>Paid campaigns</span><span>Membership system</span><span>Organic content plan</span><span>Campaign creative</span></div>
+          <div class="deliv t" lang="ar"><span>مقترح النمو</span><span>الحملات الممولة</span><span>نظام العضويات</span><span>خطة المحتوى العضوي</span><span>تصاميم الحملات</span></div>
+        </div>
+        <div class="board" data-gallery>
+          <div class="board-head"><b>MAYAN ART</b><span>2025–26</span></div>
+          <div class="row wrap-sm">
+            <figure class="tile" style="--ar:1"><img src="assets/img/myn-gateway.webp" alt="Gateway to Art post" loading="lazy" data-en="Gateway to Art" data-ar="بوابة الفن"></figure>
+            <figure class="tile" style="--ar:1"><img src="assets/img/myn-crochet.webp" alt="Crochet course post" loading="lazy" data-en="Crochet course" data-ar="دورة الكروشيه"></figure>
+            <figure class="tile" style="--ar:1"><img src="assets/img/myn-selfguided.webp" alt="Self-guided activities post" loading="lazy" data-en="Self-guided activities" data-ar="الأنشطة الحرة"></figure>
+          </div>
+          <div class="row wrap-sm">
+            <figure class="tile" style="--ar:.462"><img src="assets/img/myn-ig-grid.webp" alt="Mayan Art Instagram reels grid" loading="lazy" data-en="@mayan_corner reels" data-ar="ريلز ‎@mayan_corner"></figure>
+            <figure class="tile" style="--ar:.791"><img src="assets/img/myn-schedule.webp" alt="Workshop schedule" loading="lazy" data-en="Workshop calendar" data-ar="جدول الورش"></figure>
+            <figure class="tile" style="--ar:.4675"><img src="assets/img/myn-snap-ad.webp" alt="Snapchat collection ad preview" loading="lazy" data-en="Snapchat collection ad with Book Now" data-ar="إعلان مجموعة على سناب شات مع زر احجز الآن"></figure>
+          </div>
+          <div class="row wrap-sm">
+            <figure class="tile" style="--ar:1"><img src="assets/img/myn-shawl.webp" alt="Shawl workshop post" loading="lazy" data-en="Shawl workshop" data-ar="ورشة حياكة الشال"></figure>
+            <figure class="tile" style="--ar:1"><img src="assets/img/myn-carpenter.webp" alt="Little Carpenter workshop ad" loading="lazy" data-en="Little Carpenter workshop" data-ar="ورشة النجار الصغير"></figure>
+          </div>
+        </div>
+      </div>
+    </article>
+  </div>
+</section>
+
+<!-- ================= MORE WORK ================= -->
+<section class="sec" style="padding-top:0" aria-labelledby="more-h">
+  <div class="wrap">
+    <div class="sec-head">
+      <p class="eyebrow"><span class="t" lang="en">More work</span><span class="t" lang="ar">أعمال أخرى</span></p>
+      <h2 id="more-h" class="display">
+        <span class="t" lang="en">Real estate, spas, smart homes <em>and motorbikes</em></span>
+        <span class="t ar-h" lang="ar"><img class="ar-type" src="assets/type/ar-h-more.svg" alt="عقارات، وسبا، وبيوت ذكية، ودراجات نارية" style="--wem:9.917"></span>
+      </h2>
+    </div>
+    <div class="more" data-gallery>
+      <article class="card">
+        <div class="media"><img src="assets/img/re-investment.webp" alt="Ask Almadina Real Estate post" loading="lazy" style="object-position:50% 30%" data-en="“Your property in Madinah… security for the future”" data-ar="«عقارك في المدينة… أمان للمستقبل»"></div>
+        <div class="body">
+          <p class="k"><span class="t" lang="en">Real estate · 2026</span><span class="t" lang="ar">عقار · 2026</span></p>
+          <h4><span class="t" lang="en">Ask Almadina Real Estate</span><span class="t" lang="ar">اسأل المدينة العقارية</span></h4>
+          <p><span class="t" lang="en">Monthly content plans that educate buyers, a refresh of the brand name and identity, and a bilingual website.</span><span class="t" lang="ar">خطط محتوى شهرية تثقّف المشتري، وتحديث لاسم العلامة وهويتها، وموقع ثنائي اللغة.</span></p>
+        </div>
+      </article>
+      <article class="card">
+        <div class="media" style="--card-bg:#3E2C2A"><img src="assets/img/th-hejaz.webp" alt="Historic building in Medina at night" loading="lazy" data-en="Visual research for Thaniyyah" data-ar="مرجع بصري لسلسلة «ثنيّة»"></div>
+        <div class="body">
+          <p class="k"><span class="t" lang="en">Documentary series · 2026</span><span class="t" lang="ar">سلسلة وثائقية · 2026</span></p>
+          <h4><span class="t" lang="en">Thaniyyah <bdi>«ثنيّة»</bdi></span><span class="t" lang="ar">ثنيّة</span></h4>
+          <p><span class="t" lang="en">“From the bends of Medina, the story begins.” Name story, wordmark, a palette taken from Medina’s soil, brand voice and five video drafts.</span><span class="t" lang="ar">«من ثنيّات المدينة.. نبدأ الحكاية». قصة الاسم، والشعار، وألوان من تربة المدينة، ونبرة العلامة، وخمس مسودات فيديو.</span></p>
+        </div>
+      </article>
+      <article class="card">
+        <div class="media trio" style="--card-bg:#1A1A1A;--card-pad:10px">
+          <img src="assets/img/sh-int1.webp" alt="Smart Homes interview video frame" loading="lazy" data-en="Expert interview series" data-ar="سلسلة مقابلات الخبراء">
+          <img src="assets/img/sh-int2.webp" alt="Smart Homes interview video frame" loading="lazy" data-en="“How does the smart control system work?”" data-ar="«ما هي آلية عمل نظام التحكم الذكي؟»">
+          <img src="assets/img/sh-int3.webp" alt="Smart Homes interview video frame" loading="lazy" data-en="Leadership interview" data-ar="مقابلة قيادية">
+        </div>
+        <div class="body">
+          <p class="k"><span class="t" lang="en">Smart homes · Jeddah · 2025</span><span class="t" lang="ar">بيوت ذكية · جدة · 2025</span></p>
+          <h4><span class="t" lang="en">Smart Homes</span><span class="t" lang="ar">البيوتات الذكية</span></h4>
+          <p><span class="t" lang="en">Lead-generation campaigns on Meta, Google and Snapchat, an expert-interview video series I shot and edited, and a study of the Saudi smart-home market.</span><span class="t" lang="ar">حملات توليد عملاء محتملين على ميتا وقوقل وسناب شات، وسلسلة فيديو لمقابلات الخبراء صوّرتها ومنتجتها، ودراسة لسوق البيوت الذكية في السعودية.</span></p>
+        </div>
+      </article>
+      <article class="card">
+        <div class="media" style="--card-bg:#4A382C"><img src="assets/img/desta.webp" alt="Desta Spa logo" loading="lazy" data-en="Desta Spa" data-ar="ديستا سبا"></div>
+        <div class="body">
+          <p class="k"><span class="t" lang="en">Spa · freelance · 2026</span><span class="t" lang="ar">سبا · عمل حر · 2026</span></p>
+          <h4>Desta Spa</h4>
+          <p><span class="t" lang="en">A launch plan built around a TikTok-first week and a weekly content mix, plus short hook-style video ads.</span><span class="t" lang="ar">خطة إطلاق تبدأ بأسبوع على تيك توك ومزيج محتوى أسبوعي، وإعلانات فيديو قصيرة بأسلوب الخطّاف.</span></p>
+        </div>
+      </article>
+      <article class="card">
+        <div class="media"><img src="assets/img/sp-pulsar.webp" alt="Pulsar 150 creative for Superpower Trading" loading="lazy" data-en="Pulsar 150 launch creative" data-ar="تصميم إطلاق بولسار 150"></div>
+        <div class="body">
+          <p class="k"><span class="t" lang="en">Automotive · Addis Ababa · earlier</span><span class="t" lang="ar">دراجات نارية · أديس أبابا · سابقًا</span></p>
+          <h4>Superpower Trading PLC</h4>
+          <p><span class="t" lang="en">Customer relations and marketing support for a Bajaj dealer, including the local launch creative for the Pulsar 150, adapted from Bajaj’s key visual.</span><span class="t" lang="ar">علاقات العملاء ودعم التسويق لوكيل باجاج، ومنها تصميم الإطلاق المحلي لدراجة بولسار 150، مقتبسًا من التصميم الرئيسي لباجاج.</span></p>
+        </div>
+      </article>
+      <article class="card">
+        <div class="media" style="--card-bg:#2B2B2B"><img src="assets/img/orient.webp" alt="Orient Tourism creative" loading="lazy" data-en="“Sacred Journey with Orient”" data-ar="«رحلة مقدسة مع أورينت»"></div>
+        <div class="body">
+          <p class="k"><span class="t" lang="en">Umrah travel · Addis Ababa · earlier</span><span class="t" lang="ar">رحلات عمرة · أديس أبابا · سابقًا</span></p>
+          <h4><span class="t" lang="en">Orient Tourism</span><span class="t" lang="ar">أورينت للسياحة</span></h4>
+          <p><span class="t" lang="en">Marketing operations for an Umrah travel agency: campaign support, social creative and Arabic–English translation.</span><span class="t" lang="ar">عمليات تسويق لوكالة رحلات عمرة: دعم الحملات، وتصاميم السوشال، والترجمة بين العربية والإنجليزية.</span></p>
+        </div>
+      </article>
+    </div>
+  </div>
+</section>
+
+<!-- ================= VIDEO WALL ================= -->
+<section id="video" class="sec wall-sec" aria-labelledby="video-h">
+  <div class="wrap">
+    <div class="sec-head">
+      <p class="eyebrow"><span class="t" lang="en">Video &amp; montage</span><span class="t" lang="ar">فيديو ومونتاج</span></p>
+      <h2 id="video-h" class="display">
+        <span class="t" lang="en">Montage that keeps people <em>watching</em></span>
+        <span class="t ar-h" lang="ar"><img class="ar-type" src="assets/type/ar-h-video.svg" alt="مونتاج يُبقي المشاهد حتى النهاية" style="--wem:7.872"></span>
+      </h2>
+      <p><span class="t" lang="en">Promos, films, news edits and explainers. Hover to preview, click to watch with sound.</span><span class="t" lang="ar">إعلانات وأفلام ومونتاج أخبار وفيديوهات شرح. مرّر للمعاينة، واضغط للمشاهدة بالصوت.</span></p>
+    </div>
+    <div class="wall-group">
+      <h3><span class="t" lang="en">Promos &amp; films</span><span class="t" lang="ar">إعلانات وأفلام</span></h3>
+      <div class="wall" data-vgroup>
+        <article class="vcard" data-src="assets/video/v-wajhat.mp4" data-en="Wajhat Sultana · real-estate promo" data-ar="واجهة سلطانة · إعلان عقاري">
+          <div class="vthumb"><video src="assets/video/v-wajhat.mp4" poster="assets/video/v-wajhat-poster.webp" preload="none" muted loop playsinline></video><span class="dur">0:45</span><span class="vplay"><svg viewBox="0 0 16 16" aria-hidden="true"><path d="M3 1.8v12.4L14 8z" fill="currentColor"/></svg></span></div>
+          <span class="vtag"><span class="t" lang="en">Real-estate promo</span><span class="t" lang="ar">إعلان عقاري</span></span>
+          <h4><span class="t" lang="en">Wajhat Sultana</span><span class="t" lang="ar">واجهة سلطانة</span></h4>
+          <p><span class="t" lang="en">A satellite dive, the master plan and a timed voice-over.</span><span class="t" lang="ar">غوص من القمر الصناعي، والمخطط العام، وتعليق صوتي متزامن.</span></p>
+        </article>
+        <article class="vcard" data-src="assets/video/v-sustain.mp4" data-en="SusTAIN 2026 conference" data-ar="مؤتمر SusTAIN 2026">
+          <div class="vthumb"><video src="assets/video/v-sustain.mp4" poster="assets/video/v-sustain-poster.webp" preload="none" muted loop playsinline></video><span class="dur">0:40</span><span class="vplay"><svg viewBox="0 0 16 16" aria-hidden="true"><path d="M3 1.8v12.4L14 8z" fill="currentColor"/></svg></span></div>
+          <span class="vtag"><span class="t" lang="en">Event film</span><span class="t" lang="ar">فيلم فعالية</span></span>
+          <h4><span class="t" lang="en">SusTAIN 2026</span><span class="t" lang="ar">مؤتمر SusTAIN 2026</span></h4>
+          <p><span class="t" lang="en">The first international conference on tech and engineering innovation for sustainability.</span><span class="t" lang="ar">المؤتمر الدولي الأول للابتكار التكنولوجي والهندسي لخدمة الاستدامة.</span></p>
+        </article>
+        <article class="vcard" data-src="assets/video/v-jwalk-fountain.mp4" data-en="National Day programme at J WALK" data-ar="برنامج اليوم الوطني في جي ووك">
+          <div class="vthumb"><video src="assets/video/v-jwalk-fountain.mp4" poster="assets/video/v-jwalk-fountain-poster.webp" preload="none" muted loop playsinline></video><span class="dur">0:34</span><span class="vplay"><svg viewBox="0 0 16 16" aria-hidden="true"><path d="M3 1.8v12.4L14 8z" fill="currentColor"/></svg></span></div>
+          <span class="vtag"><span class="t" lang="en">Event</span><span class="t" lang="ar">فعالية</span></span>
+          <h4><span class="t" lang="en">The National Day programme</span><span class="t" lang="ar">برنامج اليوم الوطني</span></h4>
+          <p><span class="t" lang="en">Hour by hour, from hospitality to the fountain show.</span><span class="t" lang="ar">ساعة بساعة، من الضيافة إلى عرض النافورة.</span></p>
+        </article>
+        <article class="vcard" data-src="assets/video/v-ask-natday.mp4" data-en="ASK · National Day 96 reel" data-ar="آسك · ريل اليوم الوطني 96">
+          <div class="vthumb"><video src="assets/video/v-ask-natday.mp4" poster="assets/video/v-ask-natday-poster.webp" preload="none" muted loop playsinline></video><span class="dur">0:12</span><span class="vplay"><svg viewBox="0 0 16 16" aria-hidden="true"><path d="M3 1.8v12.4L14 8z" fill="currentColor"/></svg></span></div>
+          <span class="vtag">ASK Perfumes</span>
+          <h4><span class="t" lang="en">National Day 96 reel</span><span class="t" lang="ar">ريل اليوم الوطني 96</span></h4>
+          <p><span class="t" lang="en">“Any perfume for 96”, the National Day offer.</span><span class="t" lang="ar">«أي عطر بـ 96»، عرض اليوم الوطني.</span></p>
+        </article>
+        <article class="vcard" data-src="assets/video/v-cloud.mp4" data-en="ASK · Cloud, White Garden" data-ar="آسك · كلاود، الحديقة البيضاء">
+          <div class="vthumb"><video src="assets/video/v-cloud.mp4" poster="assets/video/v-cloud-poster.webp" preload="none" muted loop playsinline></video><span class="dur">0:24</span><span class="vplay"><svg viewBox="0 0 16 16" aria-hidden="true"><path d="M3 1.8v12.4L14 8z" fill="currentColor"/></svg></span></div>
+          <span class="vtag">ASK Perfumes</span>
+          <h4><span class="t" lang="en">Cloud, White Garden</span><span class="t" lang="ar">كلاود، الحديقة البيضاء</span></h4>
+          <p><span class="t" lang="en">A cinematic product film for Cloud.</span><span class="t" lang="ar">فيلم منتج سينمائي لعطر كلاود.</span></p>
+        </article>
+        <article class="vcard" data-src="assets/video/v-thaniyyah.mp4" data-en="Thaniyyah · documentary draft" data-ar="ثنيّة · مسودة وثائقية">
+          <div class="vthumb"><video src="assets/video/v-thaniyyah.mp4" poster="assets/video/v-thaniyyah-poster.webp" preload="none" muted loop playsinline></video><span class="dur">0:32</span><span class="vplay"><svg viewBox="0 0 16 16" aria-hidden="true"><path d="M3 1.8v12.4L14 8z" fill="currentColor"/></svg></span></div>
+          <span class="vtag"><span class="t" lang="en">Documentary</span><span class="t" lang="ar">وثائقي</span></span>
+          <h4><span class="t" lang="en">Thaniyyah, pilot opening</span><span class="t" lang="ar">«ثنيّة»، افتتاحية الحلقة</span></h4>
+          <p><span class="t" lang="en">The series opening, with voice-over.</span><span class="t" lang="ar">افتتاحية السلسلة بتعليق صوتي.</span></p>
+        </article>
+      </div>
+    </div>
+    <div class="wall-group">
+      <h3><span class="t" lang="en">News &amp; explainers</span><span class="t" lang="ar">أخبار وشرح</span></h3>
+      <div class="wall" data-vgroup>
+        <article class="vcard" data-src="assets/video/v-news-edit.mp4" data-en="School admissions news · 326.7K views" data-ar="خبر القبول في المدارس · 326.7 ألف مشاهدة">
+          <div class="vthumb"><video src="assets/video/v-news-edit.mp4" poster="assets/video/v-news-edit-poster.webp" preload="none" muted loop playsinline></video><span class="dur">0:43</span><span class="vplay"><svg viewBox="0 0 16 16" aria-hidden="true"><path d="M3 1.8v12.4L14 8z" fill="currentColor"/></svg></span></div>
+          <span class="vtag"><span class="t" lang="en">326.7K views</span><span class="t" lang="ar">326.7 ألف مشاهدة</span></span>
+          <h4><span class="t" lang="en">School admissions news</span><span class="t" lang="ar">خبر القبول في المدارس</span></h4>
+          <p><span class="t" lang="en">News edit for Ask Almadina.</span><span class="t" lang="ar">مونتاج خبر لاسأل المدينة.</span></p>
+        </article>
+        <article class="vcard" data-src="assets/video/v-education.mp4" data-en="Education in numbers" data-ar="التعليم بالأرقام">
+          <div class="vthumb"><video src="assets/video/v-education.mp4" poster="assets/video/v-education-poster.webp" preload="none" muted loop playsinline></video><span class="dur">0:28</span><span class="vplay"><svg viewBox="0 0 16 16" aria-hidden="true"><path d="M3 1.8v12.4L14 8z" fill="currentColor"/></svg></span></div>
+          <span class="vtag"><span class="t" lang="en">Infographic</span><span class="t" lang="ar">إنفوجرافيك</span></span>
+          <h4><span class="t" lang="en">Education in numbers</span><span class="t" lang="ar">التعليم بالأرقام</span></h4>
+          <p><span class="t" lang="en">The new school year, told over drone footage.</span><span class="t" lang="ar">العام الدراسي الجديد، فوق لقطات الدرون.</span></p>
+        </article>
+        <article class="vcard" data-src="assets/video/v-teachers.mp4" data-en="World Teachers’ Day tribute" data-ar="تكريم في اليوم العالمي للمعلمين">
+          <div class="vthumb"><video src="assets/video/v-teachers.mp4" poster="assets/video/v-teachers-poster.webp" preload="none" muted loop playsinline></video><span class="dur">0:35</span><span class="vplay"><svg viewBox="0 0 16 16" aria-hidden="true"><path d="M3 1.8v12.4L14 8z" fill="currentColor"/></svg></span></div>
+          <span class="vtag"><span class="t" lang="en">Tribute</span><span class="t" lang="ar">تكريم</span></span>
+          <h4><span class="t" lang="en">World Teachers’ Day</span><span class="t" lang="ar">اليوم العالمي للمعلمين</span></h4>
+          <p><span class="t" lang="en">A tribute to a teacher with more than 27 years in education.</span><span class="t" lang="ar">تحية لمعلم أمضى أكثر من 27 عامًا في التعليم.</span></p>
+        </article>
+        <article class="vcard" data-src="assets/video/v-map.mp4" data-en="Madinah region map" data-ar="خريطة منطقة المدينة">
+          <div class="vthumb"><video src="assets/video/v-map.mp4" poster="assets/video/v-map-poster.webp" preload="none" muted loop playsinline></video><span class="dur">0:26</span><span class="vplay"><svg viewBox="0 0 16 16" aria-hidden="true"><path d="M3 1.8v12.4L14 8z" fill="currentColor"/></svg></span></div>
+          <span class="vtag"><span class="t" lang="en">Map</span><span class="t" lang="ar">خريطة</span></span>
+          <h4><span class="t" lang="en">Madinah region map</span><span class="t" lang="ar">خريطة منطقة المدينة</span></h4>
+          <p><span class="t" lang="en">The region and its governorates, one by one.</span><span class="t" lang="ar">المنطقة ومحافظاتها، واحدة تلو الأخرى.</span></p>
+        </article>
+        <article class="vcard" data-src="assets/video/v-hackathon.mp4" data-en="Barmajan Al-Madinah 2026" data-ar="برمجان المدينة 2026">
+          <div class="vthumb"><video src="assets/video/v-hackathon.mp4" poster="assets/video/v-hackathon-poster.webp" preload="none" muted loop playsinline></video><span class="dur">0:30</span><span class="vplay"><svg viewBox="0 0 16 16" aria-hidden="true"><path d="M3 1.8v12.4L14 8z" fill="currentColor"/></svg></span></div>
+          <span class="vtag"><span class="t" lang="en">Launch</span><span class="t" lang="ar">إطلاق</span></span>
+          <h4><span class="t" lang="en">Barmajan Al-Madinah 2026</span><span class="t" lang="ar">برمجان المدينة 2026</span></h4>
+          <p><span class="t" lang="en">Registration launch for the city’s hackathon.</span><span class="t" lang="ar">إطلاق التسجيل في هاكاثون المدينة.</span></p>
+        </article>
+        <article class="vcard" data-src="assets/video/v-rental.mp4" data-en="The rental market in numbers" data-ar="سوق الإيجار بالأرقام">
+          <div class="vthumb"><video src="assets/video/v-rental.mp4" poster="assets/video/v-rental-poster.webp" preload="none" muted loop playsinline></video><span class="dur">0:36</span><span class="vplay"><svg viewBox="0 0 16 16" aria-hidden="true"><path d="M3 1.8v12.4L14 8z" fill="currentColor"/></svg></span></div>
+          <span class="vtag"><span class="t" lang="en">Infographic</span><span class="t" lang="ar">إنفوجرافيك</span></span>
+          <h4><span class="t" lang="en">The rental market in numbers</span><span class="t" lang="ar">سوق الإيجار بالأرقام</span></h4>
+          <p><span class="t" lang="en">Real-estate news turned into a short data story.</span><span class="t" lang="ar">خبر عقاري تحوّل إلى قصة بيانات قصيرة.</span></p>
+        </article>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ================= EXPERIENCE ================= -->
+<section id="experience" class="sec" aria-labelledby="exp-h">
+  <div class="wrap">
+    <div class="sec-head">
+      <p class="eyebrow"><span class="t" lang="en">Career</span><span class="t" lang="ar">المسيرة المهنية</span></p>
+      <h2 id="exp-h" class="display">
+        <span class="t" lang="en">Experience</span>
+        <span class="t ar-h" lang="ar"><img class="ar-type" src="assets/type/ar-h-journey.svg" alt="الخبرات" style="--wem:2.761"></span>
+      </h2>
+    </div>
+    <ol class="exp">
+      <li>
+        <span class="when"><span class="t" lang="en">Mar 2026 – present</span><span class="t" lang="ar">مارس 2026 – الآن</span></span>
+        <span class="who"><strong><span class="t" lang="en">Ask Almadina</span><span class="t" lang="ar">اسأل المدينة</span><span class="live"><span class="t" lang="en">NOW</span><span class="t" lang="ar">حاليًا</span></span></strong><span><span class="t" lang="en">Marketing Specialist · Medina</span><span class="t" lang="ar">أخصائي تسويق · المدينة المنورة</span></span></span>
+        <span class="what"><span class="t" lang="en">Content, campaigns and video montage for the group, its brands and its partners, including the Emirate of Madinah Region.</span><span class="t" lang="ar">المحتوى والحملات ومونتاج الفيديو للمجموعة وعلاماتها وشركائها، ومنهم إمارة منطقة المدينة المنورة.</span></span>
+      </li>
+      <li>
+        <span class="when"><span class="t" lang="en">Apr 2026 – present</span><span class="t" lang="ar">أبريل 2026 – الآن</span></span>
+        <span class="who"><strong><span class="t" lang="en">ASK Perfumes</span><span class="t" lang="ar">عطور آسك</span><span class="live"><span class="t" lang="en">NOW</span><span class="t" lang="ar">حاليًا</span></span></strong><span><span class="t" lang="en">Marketing · Ask Almadina group</span><span class="t" lang="ar">التسويق · مجموعة اسأل المدينة</span></span></span>
+        <span class="what"><span class="t" lang="en">Paid ads, influencers, product launches, seasonal campaigns and the Salla store.</span><span class="t" lang="ar">الإعلانات الممولة، والمؤثرون، وإطلاق المنتجات، والحملات الموسمية، ومتجر سلة.</span></span>
+      </li>
+      <li>
+        <span class="when"><span class="t" lang="en">Aug 2026 – present</span><span class="t" lang="ar">أغسطس 2026 – الآن</span></span>
+        <span class="who"><strong><span class="t" lang="en">J WALK</span><span class="t" lang="ar">جي ووك</span><span class="live"><span class="t" lang="en">NOW</span><span class="t" lang="ar">حاليًا</span></span></strong><span><span class="t" lang="en">Marketing &amp; social media</span><span class="t" lang="ar">التسويق والسوشال ميديا</span></span></span>
+        <span class="what"><span class="t" lang="en">Marketing plan, the National Day grand opening, social accounts and monthly reports.</span><span class="t" lang="ar">الخطة التسويقية، وافتتاح اليوم الوطني، وإدارة الحسابات، والتقارير الشهرية.</span></span>
+      </li>
+      <li>
+        <span class="when"><span class="t" lang="en">Jan – Mar 2026</span><span class="t" lang="ar">يناير – مارس 2026</span></span>
+        <span class="who"><strong>Desta Spa</strong><span><span class="t" lang="en">Freelance</span><span class="t" lang="ar">عمل حر</span></span></span>
+        <span class="what"><span class="t" lang="en">Launch plan and short video ads.</span><span class="t" lang="ar">خطة الإطلاق وإعلانات فيديو قصيرة.</span></span>
+      </li>
+      <li>
+        <span class="when"><span class="t" lang="en">Nov 2025 – Feb 2026</span><span class="t" lang="ar">نوفمبر 2025 – فبراير 2026</span></span>
+        <span class="who"><strong><span class="t" lang="en">Mayan Art (MYN)</span><span class="t" lang="ar">مرسم ميّان</span></strong><span><span class="t" lang="en">Marketing Assistant</span><span class="t" lang="ar">مساعد تسويق</span></span></span>
+        <span class="what"><span class="t" lang="en">Growth proposal, paid campaigns, a membership system and the Zid store.</span><span class="t" lang="ar">مقترح النمو، والحملات الممولة، ونظام العضويات، ومتجر زد.</span></span>
+      </li>
+      <li>
+        <span class="when"><span class="t" lang="en">Apr – Oct 2025</span><span class="t" lang="ar">أبريل – أكتوبر 2025</span></span>
+        <span class="who"><strong><span class="t" lang="en">Smart Homes</span><span class="t" lang="ar">البيوتات الذكية</span></strong><span><span class="t" lang="en">Marketing Associate · Jeddah</span><span class="t" lang="ar">مسوّق · جدة</span></span></span>
+        <span class="what"><span class="t" lang="en">Lead generation on Meta, Google and Snapchat, social media, and product and interview videos.</span><span class="t" lang="ar">توليد العملاء المحتملين على ميتا وقوقل وسناب شات، وإدارة السوشال ميديا، وفيديوهات المنتجات والمقابلات.</span></span>
+      </li>
+      <li>
+        <span class="when"><span class="t" lang="en">Earlier</span><span class="t" lang="ar">سابقًا</span></span>
+        <span class="who"><strong>Superpower Trading · Orient Tourism</strong><span><span class="t" lang="en">Addis Ababa</span><span class="t" lang="ar">أديس أبابا</span></span></span>
+        <span class="what"><span class="t" lang="en">Customer relations and marketing support for a Bajaj dealer and an Umrah travel agency.</span><span class="t" lang="ar">علاقات العملاء ودعم التسويق لوكيل باجاج ووكالة رحلات عمرة.</span></span>
+      </li>
+    </ol>
+
+    <div class="nle-scroll" tabindex="0" aria-label="Career timeline, 2025 to 2026">
+      <div class="nle" id="nle">
+        <div class="nle-row">
+          <span class="nle-label"><b>TC</b><span class="t" lang="en">Scrub</span><span class="t" lang="ar">اسحب</span></span>
+          <div class="ruler">
+            <span class="y" style="inset-inline-start:0%">2025</span>
+            <span class="y" style="inset-inline-start:50%">2026</span>
+            <span class="mth" style="inset-inline-start:0%">1</span><span class="mth" style="inset-inline-start:4.1667%">2</span><span class="mth" style="inset-inline-start:8.3333%">3</span><span class="mth" style="inset-inline-start:12.5%">4</span><span class="mth" style="inset-inline-start:16.6667%">5</span><span class="mth" style="inset-inline-start:20.8333%">6</span><span class="mth" style="inset-inline-start:25%">7</span><span class="mth" style="inset-inline-start:29.1667%">8</span><span class="mth" style="inset-inline-start:33.3333%">9</span><span class="mth" style="inset-inline-start:37.5%">10</span><span class="mth" style="inset-inline-start:41.6667%">11</span><span class="mth" style="inset-inline-start:45.8333%">12</span>
+            <span class="mth" style="inset-inline-start:50%">1</span><span class="mth" style="inset-inline-start:54.1667%">2</span><span class="mth" style="inset-inline-start:58.3333%">3</span><span class="mth" style="inset-inline-start:62.5%">4</span><span class="mth" style="inset-inline-start:66.6667%">5</span><span class="mth" style="inset-inline-start:70.8333%">6</span><span class="mth" style="inset-inline-start:75%">7</span><span class="mth" style="inset-inline-start:79.1667%">8</span><span class="mth" style="inset-inline-start:83.3333%">9</span><span class="mth" style="inset-inline-start:87.5%">10</span><span class="mth" style="inset-inline-start:91.6667%">11</span><span class="mth" style="inset-inline-start:95.8333%">12</span>
+            <input class="scrub" id="scrub" type="range" min="0" max="1000" value="888" aria-label="Scrub the career timeline">
+          </div>
+        </div>
+        <div class="nle-row">
+          <span class="nle-label"><b>V1</b><span class="t" lang="en">Ask Almadina</span><span class="t" lang="ar">اسأل المدينة</span></span>
+          <div class="lane"><span class="clip live" data-s="58.33" data-e="88.84" data-en="Ask Almadina" data-ar="اسأل المدينة" style="inset-inline-start:58.33%;width:30.51%"><span class="t" lang="en">Ask Almadina</span><span class="t" lang="ar">اسأل المدينة</span> <small><span class="t" lang="en">Marketing Specialist</span><span class="t" lang="ar">أخصائي تسويق</span></small></span></div>
+        </div>
+        <div class="nle-row">
+          <span class="nle-label"><b>V2</b><span class="t" lang="en">ASK Perfumes</span><span class="t" lang="ar">عطور آسك</span></span>
+          <div class="lane"><span class="clip live" data-s="64.44" data-e="88.84" data-en="ASK Perfumes" data-ar="عطور آسك" style="inset-inline-start:64.44%;width:24.4%"><span class="t" lang="en">ASK Perfumes</span><span class="t" lang="ar">عطور آسك</span></span></div>
+        </div>
+        <div class="nle-row">
+          <span class="nle-label"><b>V3</b><span class="t" lang="en">Emirate</span><span class="t" lang="ar">الإمارة</span></span>
+          <div class="lane"><span class="clip live" data-s="79.17" data-e="88.84" data-en="Emirate of Madinah Region content" data-ar="محتوى إمارة منطقة المدينة المنورة" style="inset-inline-start:79.17%;width:9.67%"><span class="t" lang="en">Emirate</span><span class="t" lang="ar">الإمارة</span></span></div>
+        </div>
+        <div class="nle-row">
+          <span class="nle-label"><b>V4</b><span class="t" lang="en">Clients</span><span class="t" lang="ar">العملاء</span></span>
+          <div class="lane">
+            <span class="clip" data-s="51.88" data-e="62.5" data-en="Desta Spa" data-ar="ديستا سبا" style="inset-inline-start:51.88%;width:10.62%">Desta Spa</span>
+            <span class="clip live" data-s="82.66" data-e="88.84" data-en="J WALK" data-ar="جي ووك" style="inset-inline-start:82.66%;width:6.18%"><span class="t" lang="en">J WALK</span><span class="t" lang="ar">جي ووك</span></span>
+          </div>
+        </div>
+        <div class="nle-row">
+          <span class="nle-label"><b>V5</b><span class="t" lang="en">Earlier</span><span class="t" lang="ar">سابقًا</span></span>
+          <div class="lane">
+            <span class="clip" data-s="12.5" data-e="41.67" data-en="Smart Homes" data-ar="البيوتات الذكية" style="inset-inline-start:12.5%;width:29.17%"><span class="t" lang="en">Smart Homes</span><span class="t" lang="ar">البيوتات الذكية</span> <small><span class="t" lang="en">Jeddah</span><span class="t" lang="ar">جدة</span></small></span>
+            <span class="clip" data-s="41.9" data-e="58.2" data-en="Mayan Art" data-ar="مرسم ميّان" style="inset-inline-start:41.9%;width:16.3%"><span class="t" lang="en">Mayan Art</span><span class="t" lang="ar">مرسم ميّان</span></span>
+          </div>
+        </div>
+        <div class="nle-row">
+          <span class="nle-label"><b>M</b><span class="t" lang="en">Markers</span><span class="t" lang="ar">علامات</span></span>
+          <div class="lane tall">
+            <span class="marker flip" style="inset-inline-start:73.06%;top:32%"><span><span class="t" lang="en">Thaniyyah identity</span><span class="t" lang="ar">هوية «ثنيّة»</span></span></span>
+            <span class="marker" style="inset-inline-start:86.39%;top:70%"><span><span class="t" lang="en">National Day 96</span><span class="t" lang="ar">اليوم الوطني 96</span></span></span>
+          </div>
+        </div>
+        <div class="ph-layer" aria-hidden="true"><div class="ph-track"><span class="playhead" id="playhead"></span></div></div>
+      </div>
+    </div>
+    <div class="readout" aria-live="polite"><span class="when" id="roWhen">Oct 2026</span><span id="roList"></span><span class="hint"><span class="t" lang="en">Drag the red handle to scrub through the timeline</span><span class="t" lang="ar">اسحب المؤشر الأحمر للتنقل في الخط الزمني</span></span></div>
+  </div>
+</section>
+
+<!-- ================= TOOLKIT ================= -->
+<section id="toolkit" class="sec" style="padding-top:0" aria-labelledby="kit-h">
+  <div class="wrap">
+    <div class="sec-head">
+      <p class="eyebrow"><span class="t" lang="en">Skills</span><span class="t" lang="ar">المهارات</span></p>
+      <h2 id="kit-h" class="display">
+        <span class="t" lang="en">Six skills, <em>one person</em></span>
+        <span class="t ar-h" lang="ar"><img class="ar-type" src="assets/type/ar-h-toolkit.svg" alt="ست مهارات في شخص واحد" style="--wem:10.233"></span>
+      </h2>
+    </div>
+    <div class="kit">
+      <div>
+        <h4><span class="t" lang="en">Strategy</span><span class="t" lang="ar">الاستراتيجية</span></h4>
+        <p><span class="t" lang="en">Marketing strategy, monthly plans, offers and bundles, launches and competitor research.</span><span class="t" lang="ar">استراتيجية التسويق، والخطط الشهرية، والعروض والباقات، وإطلاق المنتجات، ودراسة المنافسين.</span></p>
+        <div class="chips t" lang="en"><span>Campaign planning</span><span>Offers &amp; bundles</span><span>Launch plans</span><span>Competitor research</span></div>
+        <div class="chips t" lang="ar"><span>تخطيط الحملات</span><span>العروض والباقات</span><span>خطط الإطلاق</span><span>دراسة المنافسين</span></div>
+      </div>
+      <div>
+        <h4><span class="t" lang="en">Paid ads</span><span class="t" lang="ar">الإعلانات الممولة</span></h4>
+        <p><span class="t" lang="en">Full campaign management, from setup and targeting to creative, daily optimization and reporting.</span><span class="t" lang="ar">إدارة الحملات كاملة، من الإعداد والاستهداف إلى التصاميم والتحسين اليومي والتقارير.</span></p>
+        <div class="chips"><span>Snapchat</span><span>TikTok</span><span>Meta</span><span>Google</span><span>WhatsApp</span></div>
+      </div>
+      <div>
+        <h4><span class="t" lang="en">E-commerce</span><span class="t" lang="ar">التجارة الإلكترونية</span></h4>
+        <p><span class="t" lang="en">Running Salla and Zid stores: products, offers, coupons, abandoned carts and catalogs connected to the ad platforms.</span><span class="t" lang="ar">إدارة متاجر سلة وزد: المنتجات، والعروض، والكوبونات، والسلال المتروكة، وربط الكتالوجات بالمنصات الإعلانية.</span></p>
+        <div class="chips"><span>Salla</span><span>Zid</span></div>
+      </div>
+      <div>
+        <h4><span class="t" lang="en">Content</span><span class="t" lang="ar">المحتوى</span></h4>
+        <p><span class="t" lang="en">Content calendars, copy in Saudi dialect and English, influencer programs and video scripts.</span><span class="t" lang="ar">تقويمات المحتوى، والكتابة باللهجة السعودية والإنجليزية، وبرامج المؤثرين، وسكربتات الفيديو.</span></p>
+        <div class="chips t" lang="en"><span>Content calendars</span><span>Saudi-dialect copy</span><span>English copy</span><span>Influencers</span></div>
+        <div class="chips t" lang="ar"><span>تقويمات المحتوى</span><span>كتابة باللهجة السعودية</span><span>كتابة بالإنجليزية</span><span>المؤثرون</span></div>
+      </div>
+      <div>
+        <h4><span class="t" lang="en">Video</span><span class="t" lang="ar">الفيديو</span></h4>
+        <p><span class="t" lang="en">Montage for Reels, TikTok, news and ads, plus infographic and motion videos that make numbers easy to follow.</span><span class="t" lang="ar">مونتاج للريلز وتيك توك والأخبار والإعلانات، وفيديوهات إنفوجرافيك وموشن تجعل الأرقام سهلة المتابعة.</span></p>
+        <div class="chips t" lang="en"><span>Montage</span><span>News edits</span><span>Motion graphics</span><span>Infographic video</span></div>
+        <div class="chips t" lang="ar"><span>المونتاج</span><span>مونتاج الأخبار</span><span>موشن جرافيك</span><span>فيديو إنفوجرافيك</span></div>
+      </div>
+      <div>
+        <h4><span class="t" lang="en">AI</span><span class="t" lang="ar">الذكاء الاصطناعي</span></h4>
+        <p><span class="t" lang="en">Daily, professional use of AI for visuals, video, voice, copy, research and reporting.</span><span class="t" lang="ar">استخدام يومي احترافي للذكاء الاصطناعي في الصور والفيديو والصوت والكتابة والبحث والتقارير.</span></p>
+        <div class="chips t" lang="en"><span>AI visuals</span><span>AI video</span><span>AI voice-over</span><span>Research</span></div>
+        <div class="chips t" lang="ar"><span>صور بالذكاء الاصطناعي</span><span>فيديو بالذكاء الاصطناعي</span><span>تعليق صوتي</span><span>البحث</span></div>
+      </div>
+    </div>
+    <div class="langs">
+      <span><b><span class="t" lang="en">Arabic</span><span class="t" lang="ar">العربية</span></b> · <span class="t" lang="en">native</span><span class="t" lang="ar">اللغة الأم</span></span>
+      <span><b><span class="t" lang="en">English</span><span class="t" lang="ar">الإنجليزية</span></b> · <span class="t" lang="en">full professional</span><span class="t" lang="ar">احترافية كاملة</span></span>
+    </div>
+  </div>
+</section>
+
+<!-- ================= PROCESS ================= -->
+<section class="sec" style="padding-top:0" aria-labelledby="proc-h">
+  <div class="wrap">
+    <div class="sec-head">
+      <p class="eyebrow"><span class="t" lang="en">How I work</span><span class="t" lang="ar">طريقة عملي</span></p>
+      <h2 id="proc-h" class="display">
+        <span class="t" lang="en">The loop behind <em>every campaign</em></span>
+        <span class="t ar-h" lang="ar"><img class="ar-type" src="assets/type/ar-h-process.svg" alt="الدورة التي خلف كل حملة" style="--wem:9.311"></span>
+      </h2>
+    </div>
+    <ol class="steps">
+      <li><h4><span class="t" lang="en">Audit</span><span class="t" lang="ar">التشخيص</span></h4><p><span class="t" lang="en">Read the brand, the store, the ads and the accounts before spending a riyal.</span><span class="t" lang="ar">أقرأ العلامة والمتجر والإعلانات والحسابات قبل صرف أي ريال.</span></p></li>
+      <li><h4><span class="t" lang="en">Plan</span><span class="t" lang="ar">التخطيط</span></h4><p><span class="t" lang="en">A monthly plan: offers and bundles, content pillars, platforms and clear targets.</span><span class="t" lang="ar">خطة شهرية: العروض والباقات، ومحاور المحتوى، والمنصات، ومستهدفات واضحة.</span></p></li>
+      <li><h4><span class="t" lang="en">Create &amp; launch</span><span class="t" lang="ar">الإنتاج والإطلاق</span></h4><p><span class="t" lang="en">Write, design and edit the content, set up tracking, then put ads, content and creators live together.</span><span class="t" lang="ar">أكتب وأصمم وأُمنتج المحتوى، وأجهّز التتبع، ثم أطلق الإعلانات والمحتوى والمؤثرين معًا.</span></p></li>
+      <li><h4><span class="t" lang="en">Measure</span><span class="t" lang="ar">القياس</span></h4><p><span class="t" lang="en">Optimize daily, report monthly, and build next month on what actually worked.</span><span class="t" lang="ar">تحسين يومي، وتقرير شهري، وبناء الشهر التالي على ما نجح فعلًا.</span></p></li>
+    </ol>
+  </div>
+</section>
+
+<!-- ================= EDUCATION ================= -->
+<section class="sec" style="padding-top:0" aria-labelledby="edu-h">
+  <div class="wrap">
+    <div class="sec-head">
+      <p class="eyebrow"><span class="t" lang="en">Education</span><span class="t" lang="ar">التعليم</span></p>
+      <h2 id="edu-h" class="display">
+        <span class="t" lang="en">Education &amp; certificates</span>
+        <span class="t ar-h" lang="ar"><img class="ar-type" src="assets/type/ar-h-edu.svg" alt="التعليم والشهادات" style="--wem:6.683"></span>
+      </h2>
+    </div>
+    <div class="edu">
+      <div>
+        <h3><span class="t" lang="en">Degree</span><span class="t" lang="ar">الشهادة الجامعية</span></h3>
+        <ul class="edu-list">
+          <li><strong><span class="t" lang="en">Bachelor of Arts in Marketing Management</span><span class="t" lang="ar">بكالوريوس آداب في إدارة التسويق</span></strong><span class="when">Jul 2023</span><span class="where"><span class="t" lang="en">Unity University, Addis Ababa, Ethiopia</span><span class="t" lang="ar">جامعة يونيتي، أديس أبابا، إثيوبيا</span></span></li>
+          <li><strong><span class="t" lang="en">High School Diploma</span><span class="t" lang="ar">شهادة الثانوية العامة</span></strong><span class="when">May 2018</span><span class="where"><span class="t" lang="en">King Abdulaziz Secondary School, Saudi Arabia</span><span class="t" lang="ar">ثانوية الملك عبدالعزيز، المملكة العربية السعودية</span></span></li>
+        </ul>
+      </div>
+      <div>
+        <h3><span class="t" lang="en">Certificates</span><span class="t" lang="ar">الشهادات</span></h3>
+        <ul class="edu-list">
+          <li><strong>Foundations of Digital Marketing and E-commerce</strong><span class="when">Jun 2024</span><span class="where">Google · Coursera · <a href="https://www.coursera.org/account/accomplishments/verify/2AX8PYMJAHZQ" target="_blank" rel="noopener"><span class="t" lang="en">Verify</span><span class="t" lang="ar">تحقق</span></a></span></li>
+          <li><strong>Psychodiagnostics and Psychological Assessment</strong><span class="when">Dec 2020</span><span class="where">Coursera · <a href="https://www.coursera.org/account/accomplishments/verify/P8XC8XRJR2WU" target="_blank" rel="noopener"><span class="t" lang="en">Verify</span><span class="t" lang="ar">تحقق</span></a></span></li>
+          <li><strong>Learning How to Learn</strong><span class="when">Nov 2020</span><span class="where">Coursera · <a href="https://www.coursera.org/account/accomplishments/verify/XNM2BZ7HE3UV" target="_blank" rel="noopener"><span class="t" lang="en">Verify</span><span class="t" lang="ar">تحقق</span></a></span></li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ================= CONTACT ================= -->
+<section id="contact" class="sec contact" aria-labelledby="contact-h">
+  <div class="wrap contact-grid">
+    <div>
+      <p class="eyebrow"><span class="t" lang="en">Contact</span><span class="t" lang="ar">تواصل</span></p>
+      <h2 id="contact-h">
+        <span class="t" lang="en">Have a brand that deserves to be seen?</span>
+        <span class="t ar-h" lang="ar"><img class="ar-type" src="assets/type/ar-h-contact.svg" alt="عندك علامة تستحق أن تُرى؟" style="--wem:5.811"></span>
+      </h2>
+      <p class="lead"><span class="t" lang="en">I’m in Medina and work in Arabic and English. Tell me about your brand.</span><span class="t" lang="ar">أنا في المدينة المنورة، وأعمل بالعربية والإنجليزية. حدّثني عن علامتك.</span></p>
+    </div>
+    <div class="lines">
+      <div class="line">
+        <span class="lab"><span class="t" lang="en">Email</span><span class="t" lang="ar">البريد</span></span>
+        <span class="val">gbrtee11@gmail.com</span>
+        <span class="acts"><button class="pill" type="button" data-copy="gbrtee11@gmail.com"><span class="t" lang="en">Copy</span><span class="t" lang="ar">نسخ</span></button></span>
+      </div>
+      <div class="line">
+        <span class="lab"><span class="t" lang="en">Phone</span><span class="t" lang="ar">الجوال</span></span>
+        <span class="val">+966 55 754 9351</span>
+        <span class="acts">
+          <button class="pill" type="button" data-copy="+966557549351"><span class="t" lang="en">Copy</span><span class="t" lang="ar">نسخ</span></button>
+          <a class="pill" href="https://wa.me/966557549351" target="_blank" rel="noopener">WhatsApp <svg viewBox="0 0 12 12" aria-hidden="true"><path d="M3.5 8.5l5-5M4.5 3.5h4v4" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round"/></svg></a>
+        </span>
+      </div>
+      <div class="line">
+        <span class="lab">LinkedIn</span>
+        <span class="val">suhaib-nur-a37060205</span>
+        <span class="acts"><a class="pill" href="https://linkedin.com/in/suhaib-nur-a37060205" target="_blank" rel="noopener"><span class="t" lang="en">Open</span><span class="t" lang="ar">فتح</span> <svg viewBox="0 0 12 12" aria-hidden="true"><path d="M3.5 8.5l5-5M4.5 3.5h4v4" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round"/></svg></a></span>
+      </div>
+    </div>
+  </div>
+</section>
+</main>
+
+<footer>
+  <div class="wrap">
+    <span>© 2026 <span class="t" lang="en">Suhaib Abdulwahid</span><span class="t" lang="ar">صهيب عبدالواحد</span></span>
+    <span><span class="t" lang="en">Work shown belongs to its brands and organisations.</span><span class="t" lang="ar">جميع الأعمال المعروضة ملك لعلاماتها وجهاتها.</span></span>
+  </div>
+</footer>
+
+<dialog class="modal" id="vp" aria-label="Video player">
+  <button class="modal-close" type="button" data-close aria-label="Close">×</button>
+  <div class="modal-in">
+    <video id="vpVideo" controls playsinline></video>
+    <div class="modal-bar">
+      <button class="modal-nav" type="button" data-step="-1" aria-label="Previous"><svg viewBox="0 0 16 16" fill="none" aria-hidden="true"><path d="M10 3L5 8l5 5" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg></button>
+      <div><p class="modal-cap" id="vpCap"></p><p class="modal-count" id="vpCount"></p></div>
+      <button class="modal-nav" type="button" data-step="1" aria-label="Next"><svg viewBox="0 0 16 16" fill="none" aria-hidden="true"><path d="M6 3l5 5-5 5" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg></button>
+    </div>
+  </div>
+</dialog>
+
+<dialog class="modal" id="lb" aria-label="Image viewer">
+  <button class="modal-close" type="button" data-close aria-label="Close">×</button>
+  <div class="modal-in">
+    <img id="lbImg" alt="">
+    <div class="modal-bar">
+      <button class="modal-nav" type="button" data-step="-1" aria-label="Previous"><svg viewBox="0 0 16 16" fill="none" aria-hidden="true"><path d="M10 3L5 8l5 5" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg></button>
+      <div><p class="modal-cap" id="lbCap"></p><p class="modal-count" id="lbCount"></p></div>
+      <button class="modal-nav" type="button" data-step="1" aria-label="Next"><svg viewBox="0 0 16 16" fill="none" aria-hidden="true"><path d="M6 3l5 5-5 5" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg></button>
+    </div>
+  </div>
+</dialog>
+
+<script>
+(function () {
+  var root = document.documentElement;
+  var reduce = window.matchMedia && matchMedia('(prefers-reduced-motion: reduce)').matches;
+  var fine = window.matchMedia && matchMedia('(hover: hover) and (pointer: fine)').matches;
+  function lang() { return root.getAttribute('data-lang') === 'ar' ? 'ar' : 'en'; }
+  function pad(n) { return (n < 10 ? '0' : '') + n; }
+  function tcode(t) { var f = Math.floor((t % 1) * 30), s = Math.floor(t) % 60, m = Math.floor(t / 60) % 60, h = Math.floor(t / 3600); return pad(h) + ':' + pad(m) + ':' + pad(s) + ':' + pad(f); }
+
+  /* language */
+  var listeners = [];
+  function setLang(l, push) {
+    root.setAttribute('data-lang', l); root.setAttribute('lang', l); root.setAttribute('dir', l === 'ar' ? 'rtl' : 'ltr');
+    if (push) { try { if (l === 'ar') history.replaceState(null, '', '#ar'); else if (location.hash === '#ar') history.replaceState(null, '', location.pathname + location.search); } catch (e) {} }
+    listeners.forEach(function (fn) { fn(); });
+  }
+  document.getElementById('langBtn').addEventListener('click', function () { setLang(lang() === 'ar' ? 'en' : 'ar', true); });
+  window.addEventListener('hashchange', function () { if (location.hash === '#ar') setLang('ar', false); });
+
+  /* showreel */
+  var reel = document.getElementById('reel'), reelTc = document.getElementById('reelTc'), reelBtn = document.getElementById('reelBtn');
+  function reelTick() { reelTc.textContent = tcode(reel.currentTime || 0); if (!reel.paused) requestAnimationFrame(reelTick); }
+  function setReelBtn() {
+    reelBtn.innerHTML = reel.paused
+      ? '<svg viewBox="0 0 12 12" aria-hidden="true"><path d="M2.5 1.5v9L10.5 6z" fill="currentColor"/></svg><span class="t" lang="en">Play</span><span class="t" lang="ar">تشغيل</span>'
+      : '<svg viewBox="0 0 12 12" aria-hidden="true"><rect x="2" y="1.5" width="2.6" height="9" fill="currentColor"/><rect x="7.4" y="1.5" width="2.6" height="9" fill="currentColor"/></svg><span class="t" lang="en">Pause</span><span class="t" lang="ar">إيقاف</span>';
+  }
+  reel.addEventListener('play', function () { setReelBtn(); requestAnimationFrame(reelTick); });
+  reel.addEventListener('pause', setReelBtn);
+  reelBtn.addEventListener('click', function () { if (reel.paused) reel.play(); else reel.pause(); });
+  var emBg = document.querySelector('.em-bg');
+  if (reduce) { reel.removeAttribute('autoplay'); reel.pause(); emBg.removeAttribute('autoplay'); emBg.pause(); }
+  else { var p0 = reel.play(); if (p0 && p0.catch) p0.catch(function () {}); }
+  setReelBtn();
+
+  /* scroll timecode + progress */
+  var tc = document.getElementById('tc'), prog = document.getElementById('progress'), ticking = false;
+  function onScroll() {
+    var max = document.documentElement.scrollHeight - innerHeight, f = max > 0 ? Math.min(1, Math.max(0, scrollY / max)) : 0;
+    prog.style.setProperty('--p', f.toFixed(4)); tc.textContent = tcode(f * 240); ticking = false;
+  }
+  addEventListener('scroll', function () { if (!ticking) { ticking = true; requestAnimationFrame(onScroll); } }, { passive: true });
+  onScroll();
+
+  /* hero spotlight */
+  var hero = document.getElementById('hero'), spot = hero.querySelector('.spot');
+  if (fine && !reduce) hero.addEventListener('mousemove', function (e) {
+    var r = hero.getBoundingClientRect();
+    spot.style.setProperty('--mx', ((e.clientX - r.left) / r.width * 100).toFixed(1) + '%');
+    spot.style.setProperty('--my', ((e.clientY - r.top) / r.height * 100).toFixed(1) + '%');
+  });
+
+  /* custom cursor */
+  var cur = document.querySelector('.cursor'), lab = cur.querySelector('.cur-lab');
+  if (fine && !reduce) {
+    root.classList.add('has-cursor');
+    addEventListener('mousemove', function (e) { cur.classList.add('on'); cur.style.transform = 'translate3d(' + e.clientX + 'px,' + e.clientY + 'px,0)'; }, { passive: true });
+    document.addEventListener('mouseleave', function () { cur.classList.remove('on'); });
+    document.addEventListener('mouseover', function (e) {
+      var m = e.target.closest('[data-src], .tile img, .card .media img');
+      var l = e.target.closest('a, button, .clip, .scrub');
+      cur.classList.toggle('is-media', !!m); cur.classList.toggle('is-link', !m && !!l);
+      if (m) lab.textContent = m.hasAttribute('data-src') ? (lang() === 'ar' ? 'تشغيل' : 'PLAY') : (lang() === 'ar' ? 'عرض' : 'VIEW');
+    });
+  }
+
+  /* rails */
+  document.querySelectorAll('[data-rail]').forEach(function (b) {
+    b.addEventListener('click', function () {
+      var rail = document.getElementById(b.getAttribute('data-rail'));
+      var step = rail.clientWidth * 0.8 * Number(b.getAttribute('data-dir')) * (lang() === 'ar' ? -1 : 1);
+      rail.scrollBy({ left: step, behavior: reduce ? 'auto' : 'smooth' });
+    });
+  });
+
+  /* hover previews */
+  if (fine && !reduce) document.querySelectorAll('[data-src]').forEach(function (el) {
+    var v = el.querySelector('video'); if (!v) return;
+    el.addEventListener('mouseenter', function () { v.muted = true; el.classList.add('previewing'); var pr = v.play(); if (pr && pr.catch) pr.catch(function () {}); });
+    el.addEventListener('mouseleave', function () { v.pause(); el.classList.remove('previewing'); });
+  });
+
+  /* modals */
+  var vp = document.getElementById('vp'), vpVideo = document.getElementById('vpVideo'), vpCap = document.getElementById('vpCap'), vpCount = document.getElementById('vpCount');
+  var lb = document.getElementById('lb'), lbImg = document.getElementById('lbImg'), lbCap = document.getElementById('lbCap'), lbCount = document.getElementById('lbCount');
+  function openModal(d) { if (typeof d.showModal !== 'function') return false; root.classList.remove('has-cursor'); d.showModal(); return true; }
+  function closeModal(d) { if (d.open) d.close(); }
+  [vp, lb].forEach(function (d) {
+    d.addEventListener('close', function () { if (fine && !reduce) root.classList.add('has-cursor'); if (d === vp) { vpVideo.pause(); vpVideo.removeAttribute('src'); vpVideo.load(); } });
+    d.addEventListener('click', function (e) { if (e.target === d) closeModal(d); });
+    d.querySelector('[data-close]').addEventListener('click', function () { closeModal(d); });
+  });
+
+  var vList = [], vIdx = 0;
+  function showVideo(i) {
+    vIdx = (i + vList.length) % vList.length; var el = vList[vIdx];
+    vpVideo.src = el.getAttribute('data-src'); var pv = el.querySelector('video'); if (pv) vpVideo.poster = pv.getAttribute('poster');
+    vpCap.textContent = el.getAttribute('data-' + lang()) || ''; vpCount.textContent = (vIdx + 1) + ' / ' + vList.length;
+    var pr = vpVideo.play(); if (pr && pr.catch) pr.catch(function () {});
+  }
+  document.addEventListener('click', function (e) {
+    var el = e.target.closest('[data-src]'); if (!el) return;
+    var group = el.closest('[data-vgroup]');
+    vList = group ? Array.prototype.slice.call(group.querySelectorAll('[data-src]')) : [el];
+    document.querySelectorAll('[data-src] video').forEach(function (v) { v.pause(); });
+    if (!reel.paused) reel.pause();
+    if (openModal(vp)) showVideo(vList.indexOf(el));
+  });
+  vp.querySelectorAll('[data-step]').forEach(function (b) { b.addEventListener('click', function () { showVideo(vIdx + Number(b.getAttribute('data-step')) * (lang() === 'ar' ? -1 : 1)); }); });
+
+  var iList = [], iIdx = 0;
+  function showImg(i) {
+    iIdx = (i + iList.length) % iList.length; var img = iList[iIdx];
+    lbImg.src = img.currentSrc || img.src; lbImg.alt = img.alt;
+    lbCap.textContent = img.getAttribute('data-' + lang()) || img.alt; lbCount.textContent = (iIdx + 1) + ' / ' + iList.length;
+  }
+  document.addEventListener('click', function (e) {
+    var img = e.target.closest('.tile img, .card .media img'); if (!img) return;
+    var g = img.closest('[data-gallery]');
+    iList = g ? Array.prototype.slice.call(g.querySelectorAll('.tile img, .card .media img')) : [img];
+    if (openModal(lb)) showImg(iList.indexOf(img));
+  });
+  lb.querySelectorAll('[data-step]').forEach(function (b) { b.addEventListener('click', function () { showImg(iIdx + Number(b.getAttribute('data-step')) * (lang() === 'ar' ? -1 : 1)); }); });
+  document.addEventListener('keydown', function (e) {
+    var d = vp.open ? vp : lb.open ? lb : null; if (!d) return;
+    var dir = e.key === 'ArrowRight' ? 1 : e.key === 'ArrowLeft' ? -1 : 0; if (!dir) return;
+    if (lang() === 'ar') dir = -dir;
+    if (d === vp) showVideo(vIdx + dir); else showImg(iIdx + dir);
+  });
+
+  /* timeline scrubber */
+  var scrub = document.getElementById('scrub'), ph = document.getElementById('playhead'), roWhen = document.getElementById('roWhen'), roList = document.getElementById('roList');
+  var clips = Array.prototype.slice.call(document.querySelectorAll('.clip'));
+  var MON = { en: ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul', 'Aug', 'Sep', 'Oct', 'Nov', 'Dec'], ar: ['يناير', 'فبراير', 'مارس', 'أبريل', 'مايو', 'يونيو', 'يوليو', 'أغسطس', 'سبتمبر', 'أكتوبر', 'نوفمبر', 'ديسمبر'] };
+  function updateScrub() {
+    var p = Number(scrub.value) / 10, l = lang();
+    ph.style.setProperty('--ph', p + '%');
+    var mi = Math.min(23, Math.floor(p / 100 * 24));
+    roWhen.textContent = MON[l][mi % 12] + ' ' + (2025 + Math.floor(mi / 12));
+    var active = [];
+    clips.forEach(function (c) { var on = p >= Number(c.getAttribute('data-s')) && p <= Number(c.getAttribute('data-e')) + 0.05; c.classList.toggle('on', on); if (on) active.push(c.getAttribute('data-' + l)); });
+    roList.textContent = active.length ? active.join(' · ') : (l === 'ar' ? 'بين المشاريع' : 'Between projects');
+  }
+  scrub.addEventListener('input', updateScrub);
+  clips.forEach(function (c) { c.addEventListener('click', function () { var s = Number(c.getAttribute('data-s')), e = Number(c.getAttribute('data-e')); scrub.value = Math.round((s + e) / 2 * 10); updateScrub(); }); });
+  listeners.push(updateScrub);
+
+  /* copy */
+  document.querySelectorAll('[data-copy]').forEach(function (b) {
+    b.addEventListener('click', function () {
+      var text = b.getAttribute('data-copy'), old = b.innerHTML;
+      var done = function () { b.textContent = lang() === 'ar' ? 'تم النسخ' : 'Copied'; setTimeout(function () { b.innerHTML = old; }, 1400); };
+      var fallback = function () { var val = b.closest('.line').querySelector('.val'); var r = document.createRange(); r.selectNodeContents(val); var s = getSelection(); s.removeAllRanges(); s.addRange(r); };
+      try { navigator.clipboard.writeText(text).then(done, fallback); } catch (e) { fallback(); }
+    });
+  });
+
+  setLang(location.hash === '#ar' ? 'ar' : 'en', false);
+})();
+</script>
+</body>
+</html>
